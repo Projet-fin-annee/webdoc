@@ -1,4 +1,4 @@
-# web1-endgame !
+# web1-endgame 
 
 ## Stack du projet
 
@@ -11,8 +11,16 @@
 
 | url      | nom      |
 | ---      | ---      |
-| /        | Homepage |
-| /team    | Team     |
+| /        | Home |
+| /definitions    | Definitions     |
+| /immersion        | Immersion |
+| /worldMap    | WorldMap     |
+| /country        | Country |
+| /movements    | Movements     |
+| /movements/afro-america    | Afro-America     |
+| /movements/black-panthers       | Black-Panthers |
+| /movements/black-lives-matter   | Black-Lives-Matter     |
+| /conclusion    | Conclusion     |
 
 ## Command line pour démarrer le projet
 
