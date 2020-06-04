@@ -22,47 +22,47 @@ const routes = [
     component: Home
   },
   {
-    path: '/',
+    path: '/definitions',
     name: 'Definitions',
     component: Definitions
   },
   {
-    path: '/',
+    path: '/immersion',
     name: 'Immersion',
     component: Immersion
   },
   {
-    path: '/',
+    path: '/worldMap',
     name: 'WorldMap',
     component: WorldMap
   },
   {
-    path: '/',
+    path: '/country',
     name: 'Country',
     component: Country
   },
   {
-    path: '/',
+    path: '/movements',
     name: 'Movements',
     component: Movements
   },
   {
-    path: '/movements/',
+    path: '/movements/afro-america',
     name: 'Afro-America',
     component: AfroAmerica
   },
   {
-    path: '/movements/',
+    path: '/movements/black-panthers',
     name: 'Black-Panthers',
     component: BlackPanthers
   },
   {
-    path: '/movements/',
+    path: '/movements/black-lives-matter',
     name: 'Black-Lives-Matter',
     component: BlackLivesMatter
   },
   {
-    path: '/',
+    path: '/conclusion',
     name: 'Conclusion',
     component: Conclusion
   }
