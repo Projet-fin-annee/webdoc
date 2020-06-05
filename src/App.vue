@@ -1,26 +1,26 @@
 <template>
   <div id="app">
     <Header />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Header from '@/components/partials/Header.vue'
+import Header from "@/components/partials/Header.vue";
 
 export default {
   components: {
     Header
   }
-}
+};
 </script>
 
 <style lang="scss">
+@import "./scss/style.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
+  color: $neutral-white;
 }
 </style>
