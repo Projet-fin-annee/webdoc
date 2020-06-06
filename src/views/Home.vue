@@ -1,17 +1,20 @@
 <template>
   <div class="home">
+    <Summary></Summary>
     <Buttons></Buttons>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Summary from "@/components/Summary.vue";
 import Buttons from "@/components/Buttons/Buttons.vue";
 
 export default {
   name: "Home",
   components: {
-    Buttons
+    Buttons,
+    Summary
   }
 };
 </script>
@@ -27,10 +30,11 @@ export default {
   width: 100%;
   height: 100vh;
   color: $neutral-white;
-
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  font-size: 14px;
+  @include medium {
+    font-size: 16px;
+  }
 }
 </style>
