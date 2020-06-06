@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <VideoHome></VideoHome>
     <Summary></Summary>
     <Buttons></Buttons>
   </div>
@@ -7,12 +8,14 @@
 
 <script>
 // @ is an alias to /src
+import VideoHome from "@/components/VideoHome.vue";
 import Summary from "@/components/Summary.vue";
 import Buttons from "@/components/Buttons/Buttons.vue";
 
 export default {
   name: "Home",
   components: {
+    VideoHome,
     Buttons,
     Summary
   }
@@ -21,7 +24,7 @@ export default {
 
 <style lang="scss">
 @import "../scss/style.scss";
-
+ 
 .home {
   background-image: url("../assets/home.png");
   background-size: cover;
