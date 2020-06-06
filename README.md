@@ -1,4 +1,4 @@
-# web1-endgame 
+# LES MOUVEMENTS DE SOUTIENS A LA LUTTE CONTRE LES VIOLENCES POLICIERES A CARACTERE RACISTE DANS LE MONDE
 
 ## Stack du projet
 
@@ -7,20 +7,11 @@
   - Vue Router
 - Sass
 
-## Route
+## API
 
-| url      | nom      |
+| route      | description      |
 | ---      | ---      |
-| /        | Home |
-| /definitions    | Definitions     |
-| /immersion        | Immersion |
-| /worldMap    | WorldMap     |
-| /country        | Country |
-| /movements    | Movements     |
-| /movements/afro-america    | Afro-America     |
-| /movements/black-panthers       | Black-Panthers |
-| /movements/black-lives-matter   | Black-Lives-Matter     |
-| /conclusion    | Conclusion     |
+| /        | description |
 
 ## Command line pour démarrer le projet
 
