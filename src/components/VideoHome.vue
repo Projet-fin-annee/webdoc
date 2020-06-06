@@ -46,7 +46,7 @@ export default {
 .homeVideo{
   position: fixed;
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   &__container{
     width: 100%;
     position: relative;
@@ -75,7 +75,7 @@ export default {
   transition: all 1s ease-in-out;
 }
 .homeVideoVisibility-leave-to{
-  visibility: 0;
+  opacity: 0;
 }
 .disclaimerVisibility-leave-active,.problematicVisibility-enter-active {
   transition: all .5s ease-in-out;
