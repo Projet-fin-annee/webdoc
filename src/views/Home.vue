@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <VideoHome></VideoHome>
+    <Summary></Summary>
     <Buttons></Buttons>
   </div>
 </template>
@@ -8,13 +9,15 @@
 <script>
 // @ is an alias to /src
 import VideoHome from "@/components/VideoHome.vue";
+import Summary from "@/components/Summary.vue";
 import Buttons from "@/components/Buttons/Buttons.vue";
 
 export default {
   name: "Home",
   components: {
     VideoHome,
-    Buttons
+    Buttons,
+    Summary
   }
 };
 </script>
@@ -30,10 +33,11 @@ export default {
   width: 100%;
   height: 100vh;
   color: $neutral-white;
-
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  font-size: 14px;
+  @include medium {
+    font-size: 16px;
+  }
 }
 </style>
