@@ -10,7 +10,7 @@
       />
       <nav class="summary__links">
         <ul>
-          <li class="summary__item" v-for="item in menuList" :key="item">
+          <li class="summary__item" v-for="(item,index) in menuList" :key="index">
             <router-link :to="{path:item.router}">{{item.name}}</router-link>
           </li>
         </ul>
