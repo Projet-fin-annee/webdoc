@@ -1,14 +1,13 @@
 <template>
-  <div class="soundButton" @click="notListened = !notListened">
+  <div class="soundButton" @click="songListened = !songListened">
     <div
       class="soundButton__container"
-      :class="notListened ? 'notSound' : 'okaySound'"
     >
-      <div class="soundButton__bar bar1"></div>
-      <div class="soundButton__bar soundButton__bar--small bar2"></div>
-      <div class="soundButton__bar bar3"></div>
-      <div class="soundButton__bar soundButton__bar--small bar4"></div>
-      <div class="soundButton__bar bar5"></div>
+      <div class="soundButton__bar bar1" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar2" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar3" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar4" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar5" :class="songListened ? 'okaySound' : 'notSound'"></div>
     </div>
   </div>
 </template>
@@ -17,7 +16,7 @@
 export default {
   data() {
     return {
-      notListened: false
+      songListened: true
     };
   }
 };
@@ -38,13 +37,6 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
-  .notSound {
-    border: 2px solid red;
-  }
-  .okaySound {
-    border: none;
-  }
-
   @include medium {
     width: 42px;
     height: 42px;
@@ -53,8 +45,9 @@ export default {
   &__container {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
     width: 70%;
+    height: 70%;
   }
 
   &__bar {
@@ -66,24 +59,24 @@ export default {
     @include medium {
       height: 16px;
     }
-    &--small {
+    &:nth-child(2n) {
       height: 8px;
     }
   }
 
-  .bar1 {
+  .bar1.okaySound {
     animation: soundAnimate infinite 1.2s ease-in-out;
   }
-  .bar2 {
+  .bar2.okaySound {
     animation: soundAnimate infinite 1.7s ease-in-out;
   }
-  .bar3 {
+  .bar3.okaySound{
     animation: soundAnimate infinite 2.3s ease-in-out;
   }
-  .bar4 {
+  .bar4.okaySound{
     animation: soundAnimate infinite 0.6s ease-in-out;
   }
-  .bar5 {
+  .bar5.okaySound{
     animation: soundAnimate infinite 1.8s ease-in-out;
   }
 }
