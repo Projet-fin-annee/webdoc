@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <vue-page-transition name="overlay-right-full">
+      <router-view />
+    </vue-page-transition>
   </div>
 </template>
 
@@ -11,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./scss/style.scss";
+@import './scss/style.scss';
 
 #app {
   font-family: Arial, sans-serif;
