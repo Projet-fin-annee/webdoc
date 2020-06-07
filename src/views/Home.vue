@@ -2,10 +2,7 @@
   <div class="home">
     <VideoHome></VideoHome>
     <Summary></Summary>
-
-    <Buttons></Buttons>
     <SoundButton></SoundButton>
-
     <div class="home__container">
       <div class="home__titles">
         <h1 class="home__mainTitle">“CAN WE <span>BREATHE</span> NOW ?”</h1>
@@ -99,11 +96,13 @@ export default {
   &__userContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
   &__userExperience{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     margin: 80px 0px;
 
@@ -111,7 +110,7 @@ export default {
   &__userExperienceIcons{
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
+    width: 30%;
     margin-top: 16px;
   }
   &__userExperienceIcon{
