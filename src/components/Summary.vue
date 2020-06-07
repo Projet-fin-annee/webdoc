@@ -63,6 +63,7 @@ export default {
     position: absolute;
     background-color: $primary-color;
     top: 0;
+    left: 0;
     opacity: 0;
     transform: translateX(-100%);
     visibility: hidden;
