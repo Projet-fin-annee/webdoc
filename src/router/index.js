@@ -11,6 +11,8 @@ import Home from '../views/Home.vue';
 
 // import AfroAmerica from '../views/movements/AfroAmerica.vue';
 
+import Conclusion from '../views/Conclusion.vue';
+
 Vue.use(VueRouter);
 
 // C'est dans la constante routes que vous définisez les différentes routes de votre projet
@@ -20,7 +22,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  }
+  },
   // {
   //   path: '/definitions',
   //   name: 'Definitions',
@@ -61,11 +63,11 @@ const routes = [
   //   name: 'Black-Lives-Matter',
   //   component: BlackLivesMatter
   // },
-  // {
-  //   path: '/conclusion',
-  //   name: 'Conclusion',
-  //   component: Conclusion
-  // }
+  {
+    path: '/conclusion',
+    name: 'Conclusion',
+    component: Conclusion
+  }
 ];
 
 const router = new VueRouter({
