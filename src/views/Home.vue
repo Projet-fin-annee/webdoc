@@ -3,6 +3,7 @@
     <VideoHome></VideoHome>
     <Summary></Summary>
     <Buttons></Buttons>
+    <SoundButton></SoundButton>
   </div>
 </template>
 
@@ -11,20 +12,22 @@
 import VideoHome from "@/components/VideoHome.vue";
 import Summary from "@/components/Summary.vue";
 import Buttons from "@/components/Buttons/Buttons.vue";
+import SoundButton from "@/components/SoundButton.vue";
 
 export default {
   name: "Home",
   components: {
     VideoHome,
     Buttons,
-    Summary
+    Summary,
+    SoundButton
   }
 };
 </script>
 
 <style lang="scss">
 @import "../scss/style.scss";
- 
+
 .home {
   background-image: url("../assets/home.png");
   background-size: cover;
