@@ -4,7 +4,7 @@
       <router-link to="/">Immersion</router-link>
     </Button>
     <Button type="outline">
-      <router-link to="/">Definitions</router-link>
+      <router-link to="/">Histoire</router-link>
     </Button>
   </div>
 </template>
@@ -24,6 +24,5 @@ export default {
 .buttons {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
 }
 </style>
