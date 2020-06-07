@@ -44,6 +44,7 @@ export default {
 <style lang="scss">
 @import "../scss/style.scss";
 .homeVideo{
+  z-index: 3;
   position: fixed;
   width: 100%;
   max-height: 100vh;
