@@ -9,7 +9,7 @@
         alt="close menu"
       />
       <nav class="summary__links">
-        <ul>
+        <ul class="summary__items">
           <li class="summary__item" v-for="(item,index) in menuList" :key="index">
             <router-link :to="{path:item.router}">{{item.name}}</router-link>
           </li>
@@ -40,7 +40,6 @@ export default {
 
 .summary {
   margin-top: 30px;
-
   &__text {
     color: $primary-color;
     padding: 10px 0;
@@ -54,34 +53,49 @@ export default {
       color: $neutral-white;
     }
     @include medium {
-      margin-left: 80px;
+      position: absolute;
+      top: 30px;
+      left: 80px;
     }
   }
   &__menu {
+    transition: .4s all ease-in-out;
     position: absolute;
     background-color: $primary-color;
     top: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    visibility: hidden;
     text-align: left;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-
+    display: flex;
     @include medium {
       width: 300px;
-      height: 300px;
+      height: 100vh;
     }
-
     &.close {
-      display: none;
+      opacity: 0;
+      transform: translateX(-100%);
+      visibility: hidden;
     }
     &.open {
-      display: flex;
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
   }
-  &__item {
-    padding-bottom: 15px;
-  }
+    &__links{
+      height: 40vh;
+    }
+    &__items{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
   &__close {
     position: absolute;
     top: 20px;

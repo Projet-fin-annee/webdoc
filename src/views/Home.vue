@@ -34,6 +34,7 @@ export default {
   height: 100vh;
   color: $neutral-white;
   display: flex;
+  align-items: center;
   flex-direction: column;
   font-size: 14px;
   @include medium {

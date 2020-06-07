@@ -23,7 +23,7 @@ export default {
 @import "../../scss/style.scss";
 .buttons {
   display: flex;
-  justify-content: space-around;
-  width: 60%;
+  justify-content: space-evenly;
+  width: 40%;
 }
 </style>
