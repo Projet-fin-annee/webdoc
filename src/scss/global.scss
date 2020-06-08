@@ -5,6 +5,12 @@
 .fade-leave-to {
   opacity: 0;
 }
+img {
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
 
 a {
   color: $neutral-white;

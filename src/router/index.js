@@ -7,7 +7,7 @@ import Home from '../views/Home.vue';
 // import Immersion from '../views/Immersion.vue';
 // import WorldMap from '../views/WorldMap.vue';
 // import Country from '../views/Country.vue';
-// import Movements from '../views/Movements.vue';
+import Movements from '../views/Movements.vue';
 
 // import AfroAmerica from '../views/movements/AfroAmerica.vue';
 
@@ -43,11 +43,11 @@ const routes = [
   //   name: 'Country',
   //   component: Country
   // },
-  // {
-  //   path: '/movements',
-  //   name: 'Movements',
-  //   component: Movements
-  // },
+  {
+    path: '/movements',
+    name: 'Movements',
+    component: Movements
+  },
   // {
   //   path: '/movements/afro-america',
   //   name: 'Afro-America',
