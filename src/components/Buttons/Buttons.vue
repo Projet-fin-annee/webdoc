@@ -4,7 +4,7 @@
       <router-link to="/">Immersion</router-link>
     </Button>
     <Button type="outline">
-      <router-link to="/">Histoire</router-link>
+      <router-link to="/movements">Histoire</router-link>
     </Button>
   </div>
 </template>

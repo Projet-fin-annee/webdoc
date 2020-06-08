@@ -1,8 +1,82 @@
-<template></template>
+<template>
+  <div class="movements">
+    <Movement
+      :path="detailsMovement.path.afm"
+      :image="detailsMovement.image.afm"
+      :date="detailsMovement.date.afm"
+      :chapter="detailsMovement.chapter.afm"
+      :title="detailsMovement.title.afm"
+    ></Movement>
+    <Movement
+      :path="detailsMovement.path.bp"
+      :image="detailsMovement.image.bp"
+      :date="detailsMovement.date.bp"
+      :chapter="detailsMovement.chapter.bp"
+      :title="detailsMovement.title.bp"
+    ></Movement>
+    <Movement
+      :path="detailsMovement.path.blm"
+      :image="detailsMovement.image.blm"
+      :date="detailsMovement.date.blm"
+      :chapter="detailsMovement.chapter.blm"
+      :title="detailsMovement.title.blm"
+    ></Movement>
+  </div>
+</template>
 
 <script>
-export default {};
+import Movement from "@/components/Movement.vue";
+
+export default {
+  name: "Movements",
+  components: {
+    Movement
+  },
+  data() {
+    return {
+      detailsMovement: {
+        path: {
+          afm: "/movements/AfroAmerica",
+          bp: "/movements/BlackPanthers",
+          blm: "/movements/BlackLivesMatter"
+        },
+        image: {
+          afm: "../img/movementafro.851c7f69.png",
+          bp: "../img/blackpanthers.06f90bc3.png",
+          blm: "../img/blm.fa2a936f.png"
+        },
+        date: {
+          afm: "1954 - 1968",
+          bp: "1966 - 1981",
+          blm: "1966 - aujourd'hui"
+        },
+        chapter: {
+          afm: "I",
+          bp: "II",
+          blm: "III"
+        },
+        title: {
+          afm: "Mouvement Afro-Américain des droits civiques",
+          bp: "Black Panthers",
+          blm: "BLACK LIVES MATTER"
+        }
+      }
+    };
+  }
+};
 </script>
 
-<style>
+<style lang='scss'>
+@import "../scss/style.scss";
+
+.movements {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/texture.png");
+  @include medium {
+    flex-direction: row;
+  }
+}
 </style>
