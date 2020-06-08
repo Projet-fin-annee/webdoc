@@ -2,10 +2,12 @@
   <div class="home">
     <VideoHome></VideoHome>
     <Summary></Summary>
-    <SoundButton></SoundButton>
     <div class="home__container">
       <div class="home__titles">
-        <h1 class="home__mainTitle">“CAN WE <span>BREATHE</span> NOW ?”</h1>
+        <h1 class="home__mainTitle">
+          “CAN WE
+          <span>BREATHE</span> NOW ?”
+        </h1>
         <h3 class="home__subTitle">#BLACKLIVESMATTER</h3>
       </div>
       <div class="home__userContainer">
@@ -13,13 +15,16 @@
         <div class="home__userExperience">
           <p class="home__userExperienceTitle">POUR UNE MEILLEURE EXPERIENCE</p>
           <div class="home__userExperienceIcons">
-            <img class="home__userExperienceIcon" src="../assets/icons/desktop.svg" alt="desktopIcons">
-            <img class="home__userExperienceIcon" src="../assets/icons/cask.svg" alt="caskIcons">
+            <img
+              class="home__userExperienceIcon"
+              src="../assets/icons/desktop.svg"
+              alt="desktopIcons"
+            />
+            <img class="home__userExperienceIcon" src="../assets/icons/cask.svg" alt="caskIcons" />
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -28,15 +33,13 @@
 import VideoHome from "@/components/VideoHome.vue";
 import Summary from "@/components/Summary.vue";
 import Buttons from "@/components/Buttons/Buttons.vue";
-import SoundButton from "@/components/SoundButton.vue";
 
 export default {
   name: "Home",
   components: {
     VideoHome,
     Buttons,
-    Summary,
-    SoundButton
+    Summary
   }
 };
 </script>
@@ -59,21 +62,21 @@ export default {
   @include medium {
     font-size: 16px;
   }
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     justify-content: space-between;
   }
-  &__titles{
+  &__titles {
     font-weight: bold;
     text-align: center;
     margin-top: 100px;
   }
-  &__mainTitle{
+  &__mainTitle {
     font-size: 22px;
-    & span{
+    & span {
       color: $primary-color;
     }
     @include medium {
@@ -83,7 +86,7 @@ export default {
       font-size: 60px;
     }
   }
-  &__subTitle{
+  &__subTitle {
     font-size: 16px;
     color: $light-grey;
     @include medium {
@@ -93,27 +96,26 @@ export default {
       font-size: 24px;
     }
   }
-  &__userContainer{
+  &__userContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  &__userExperience{
+  &__userExperience {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     margin: 80px 0px;
-
   }
-  &__userExperienceIcons{
+  &__userExperienceIcons {
     display: flex;
     justify-content: space-evenly;
     width: 30%;
     margin-top: 16px;
   }
-  &__userExperienceIcon{
+  &__userExperienceIcon {
     width: 20px;
     @include medium {
       width: 26px;
