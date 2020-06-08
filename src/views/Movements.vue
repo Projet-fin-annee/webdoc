@@ -75,6 +75,9 @@ export default {
   height: 100vh;
   width: 100%;
   background-image: url("../assets/texture.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   @include medium {
     flex-direction: row;
   }
