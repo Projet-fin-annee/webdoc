@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
+@import '../../scss/style.scss';
 
 button {
   padding: 8px 17px;
@@ -29,6 +29,11 @@ button {
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+
+  &:hover {
+    border-radius: 20px;
+  }
 
   @include medium {
     padding: 15px 32px;
