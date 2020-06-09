@@ -1,8 +1,6 @@
 <template>
   <div class="soundButton" @click="songListened = !songListened">
-    <div
-      class="soundButton__container"
-    >
+    <div class="soundButton__container">
       <div class="soundButton__bar bar1" :class="songListened ? 'okaySound' : 'notSound'"></div>
       <div class="soundButton__bar bar2" :class="songListened ? 'okaySound' : 'notSound'"></div>
       <div class="soundButton__bar bar3" :class="songListened ? 'okaySound' : 'notSound'"></div>
@@ -23,12 +21,12 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/style.scss';
+@import "../scss/style.scss";
 
 .soundButton {
   position: absolute;
-  bottom: 40px;
-  right: 80px;
+  bottom: 20px;
+  right: 20px;
   width: 36px;
   height: 36px;
   border: 1px solid $primary-color;
@@ -41,6 +39,8 @@ export default {
   @include medium {
     width: 42px;
     height: 42px;
+    bottom: 40px;
+    right: 80px;
   }
 
   &__container {
@@ -71,13 +71,13 @@ export default {
   .bar2.okaySound {
     animation: soundAnimate infinite 1.7s ease-in-out;
   }
-  .bar3.okaySound{
+  .bar3.okaySound {
     animation: soundAnimate infinite 2.3s ease-in-out;
   }
-  .bar4.okaySound{
+  .bar4.okaySound {
     animation: soundAnimate infinite 0.6s ease-in-out;
   }
-  .bar5.okaySound{
+  .bar5.okaySound {
     animation: soundAnimate infinite 1.8s ease-in-out;
   }
 }

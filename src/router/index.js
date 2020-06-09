@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 // import Definitions from '../views/Definitions.vue';
 // import Immersion from '../views/Immersion.vue';
+import Tutorial from '../views/Tutorial.vue';
 // import WorldMap from '../views/WorldMap.vue';
 // import Country from '../views/Country.vue';
 import Movements from '../views/Movements.vue';
@@ -43,6 +44,11 @@ const routes = [
   //   name: 'Country',
   //   component: Country
   // },
+  {
+    path: '/tutorial',
+    name: 'Tutorial',
+    component: Tutorial
+  },
   {
     path: '/movements',
     name: 'Movements',
