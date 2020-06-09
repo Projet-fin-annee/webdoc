@@ -6,9 +6,11 @@
 George Floyd est un citoyen afro-Américain mort après une violente interpellation de police suite à un long et douloureux plaquage ventral le 25 mai 2020 à Minneapolis dans le Minnesota aux USA. Interpellé car soupçonné d’avoir utilisé un faux chèque dans une épicerie il a subit une violence démesurée et motivée par un racisme apparent durant son interpellation. 
 Suite à ce meurte, de partout dans le monde, les cris des militants résonnent, cette violence policière envers les noirs doit cesser." :repeat='0' :type-delay='40' :shuffle='true'></vue-typer>
     </div>
-  <Button class="introduction__button" type="outline">
-      <router-link to="/tutorial">PASSER L’INTRODUCTION</router-link>
-    </Button>
+    <router-link to="/tutorial">
+      <Button class="introduction__button" type="outline">
+        PASSER L’INTRODUCTION
+      </Button>
+    </router-link>
   </div>
 </template>
 

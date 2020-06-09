@@ -28,9 +28,11 @@
       </div>
       <Button class="tutorial__button">France</Button>
     </div>
-    <Button type="outline" class="tutorial__next">
-      <router-link to="/WorldMap">DÉCOUVRIR LA CARTE DU MONDE</router-link>
-    </Button>
+    <router-link to="/WorldMap">
+      <Button type="outline" class="tutorial__next">
+        DÉCOUVRIR LA CARTE DU MONDE
+      </Button>
+    </router-link>
   </div>
 </template>
 

@@ -1,11 +1,15 @@
 <template>
   <div class="buttons">
-    <Button>
-      <router-link to="/introduction">Immersion</router-link>
-    </Button>
-    <Button type="outline">
-      <router-link to="/movements">Histoire</router-link>
-    </Button>
+    <router-link to="/introduction">
+      <Button>
+        Immersion
+      </Button>
+    </router-link>
+    <router-link to="/movements">
+      <Button type="outline">
+        Histoire
+      </Button>
+    </router-link>
   </div>
 </template>
 
