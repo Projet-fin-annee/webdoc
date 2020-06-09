@@ -21,8 +21,8 @@
       :chapter="detailsMovement.chapter.blm"
       :title="detailsMovement.title.blm"
     ></Movement>
+    <NavbarDesktop currentPage= "L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
     <NavbarMobile></NavbarMobile>
-    <NavbarDesktop></NavbarDesktop>
   </div>
 </template>
 
