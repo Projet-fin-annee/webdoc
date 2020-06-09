@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 
 // VIEWS IMPORT
 import Home from '../views/Home.vue';
+import Introduction from '../views/Introduction.vue';
+
 // import Definitions from '../views/Definitions.vue';
 // import Immersion from '../views/Immersion.vue';
 import Tutorial from '../views/Tutorial.vue';
@@ -23,6 +25,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+   {
+    path: '/introduction',
+    name: 'Introduction',
+    component: Introduction
   },
   // {
   //   path: '/definitions',

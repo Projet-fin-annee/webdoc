@@ -1,7 +1,7 @@
 <template>
   <div class="buttons">
     <Button>
-      <router-link to="/">Immersion</router-link>
+      <router-link to="/introduction">Immersion</router-link>
     </Button>
     <Button type="outline">
       <router-link to="/movements">Histoire</router-link>
