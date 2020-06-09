@@ -32,6 +32,7 @@ export default {
   width: 36px;
   height: 36px;
   border: 1px solid $primary-color;
+  z-index: 5;
   border-radius: 50%;
   display: flex;
   align-items: center;
