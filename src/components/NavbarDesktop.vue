@@ -1,8 +1,8 @@
 <template>
     <nav class="navbarDesktop">
         <ul class="navbarDesktop__items">
-          <li class="navbarDesktop__item" v-for="(item,index) in menuList" :key="index">
-            <router-link :to="{path:item.router}">{{item.name}}</router-link>
+          <li class="navbarDesktop__item" v-for="(item,index) in menuList" :key="index" >
+            <router-link :class="item.name == currentPage ? 'active' : ''" :to="{path:item.router}">{{item.name}}</router-link>
           </li>
         </ul>
     </nav>
@@ -19,7 +19,8 @@ export default {
         { name: "CONCLUSION", router: "/conclusion" }
       ]
     };
-  }
+  },
+   props: ["currentPage"]
 }
 </script>
 
@@ -32,8 +33,7 @@ export default {
     position: absolute;
     bottom: 0;
     height: 50px;
-    background-color: black;
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.580);
   @include large{
     display: block;
   }
@@ -43,6 +43,10 @@ export default {
     width: 70%;
     align-items: center;
     justify-content: space-evenly;
+  }
+  a.active{
+    color: $primary-color;
+    font-weight: bold;
   }
 }
 </style>
