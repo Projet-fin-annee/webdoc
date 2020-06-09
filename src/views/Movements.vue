@@ -41,9 +41,9 @@ export default {
           blm: "/movements/BlackLivesMatter"
         },
         image: {
-          afm: "../img/movementafro.851c7f69.png",
-          bp: "../img/blackpanthers.06f90bc3.png",
-          blm: "../img/blm.fa2a936f.png"
+          afm: "movementafro.png",
+          bp: "blackpanthers.png",
+          blm: "blm.png"
         },
         date: {
           afm: "1954 - 1968",
@@ -68,17 +68,20 @@ export default {
 
 <style lang='scss'>
 @import "../scss/style.scss";
-
+a{
+  padding: 0;
+}
 .movements {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   background-image: url("../assets/texture.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  @include medium {
+  @include large {
     flex-direction: row;
   }
 }

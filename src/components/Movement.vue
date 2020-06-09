@@ -1,14 +1,14 @@
 <template>
-  <div class="movement">
     <router-link :to="path">
-      <img :src="image" alt="image movement" class="movement__image" />
+      <div class="movement">
+          <img :src="require(`@/assets/${image}`)" class="movement__image" />
+          <div class="movement__details">
+            <p class="movement__date">{{ date }}</p>
+            <p class="movement__chapter">{{ chapter }}</p>
+            <h2 class="movement__title">{{ title }}</h2>
+          </div>
+      </div>
     </router-link>
-    <div class="movement__details">
-      <p class="movement__date">{{ date }}</p>
-      <p class="movement__chapter">{{ chapter }}</p>
-      <h2 class="movement__title">{{ title }}</h2>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -28,14 +28,16 @@ export default {
   height: calc(100vh / 3);
   opacity: 1;
   overflow: hidden;
-  @include medium {
-    width: calc(100% / 3);
+  @include large {
     height: 100vh;
     opacity: 0.6;
     transition: 0.6s all;
     cursor: pointer;
     &:hover {
       opacity: 1;
+      .movement__image{
+        opacity: 1;
+      }
     }
   }
   a {
@@ -48,7 +50,8 @@ export default {
     width: 100%;
     min-height: 100%;
     opacity: 0.6;
-    @include medium {
+    @include large {
+      object-fit: cover;
       opacity: 0.7;
     }
   }
@@ -56,7 +59,7 @@ export default {
     width: 80%;
     position: absolute;
     color: white;
-    @include medium {
+    @include large {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
