@@ -36,6 +36,7 @@ export default {
     &:hover {
       opacity: 1;
       .movement__image{
+        transform: scale(1.1);
         opacity: 1;
       }
     }
@@ -47,6 +48,7 @@ export default {
   }
   &__image {
     position: relative;
+    transition: 0.6s all;
     width: 100%;
     min-height: 100%;
     opacity: 0.6;
@@ -70,6 +72,7 @@ export default {
   }
   &__date {
     font-size: 16px;
+    font-family: PlayfairDisplay-Regular;
     @include medium {
       font-size: 24px;
     }
@@ -78,6 +81,7 @@ export default {
     margin-top: 12px;
     font-size: 36px;
     font-weight: bold;
+    font-family: PlayfairDisplay-Regular;
     @include medium {
       font-size: 80px;
     }
