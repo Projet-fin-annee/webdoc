@@ -22,10 +22,12 @@
       :title="detailsMovement.title.blm"
     ></Movement>
     <NavbarDesktop currentPage= "L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
+    <NavbarMobile></NavbarMobile>
   </div>
 </template>
 
 <script>
+import NavbarMobile from "@/components/NavbarMobile.vue";
 import NavbarDesktop from "@/components/NavbarDesktop.vue";
 import Movement from "@/components/Movement.vue";
 
@@ -33,7 +35,8 @@ export default {
   name: "Movements",
   components: {
     Movement,
-    NavbarDesktop
+    NavbarDesktop,
+    NavbarMobile
   },
   data() {
     return {
@@ -71,12 +74,13 @@ export default {
 
 <style lang='scss'>
 @import "../scss/style.scss";
-a{
+a {
   padding: 0;
 }
 .movements {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
