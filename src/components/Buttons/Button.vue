@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../scss/style.scss';
+@import "../../scss/style.scss";
 
 button {
   padding: 8px 17px;
@@ -32,7 +32,6 @@ button {
 
   @include medium {
     padding: 15px 32px;
-    color: 16px;
     border: 3px solid $primary-color;
   }
   &.outline {
