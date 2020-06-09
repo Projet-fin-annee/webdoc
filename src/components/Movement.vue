@@ -28,11 +28,8 @@ export default {
   height: calc(100vh / 3);
   opacity: 1;
   overflow: hidden;
-  @include large {
-    height: 100vh;
-    opacity: 0.6;
-    transition: 0.6s all;
-    cursor: pointer;
+  @include medium{
+  cursor: pointer;
     &:hover {
       opacity: 1;
       .movement__image{
@@ -40,6 +37,11 @@ export default {
         opacity: 1;
       }
     }
+  }
+  @include large {
+    height: 100vh;
+    opacity: 0.6;
+    transition: 0.6s all;
   }
   a {
     padding: 0;
