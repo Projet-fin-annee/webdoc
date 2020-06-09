@@ -21,16 +21,19 @@
       :chapter="detailsMovement.chapter.blm"
       :title="detailsMovement.title.blm"
     ></Movement>
+    <NavbarDesktop></NavbarDesktop>
   </div>
 </template>
 
 <script>
+import NavbarDesktop from "@/components/NavbarDesktop.vue";
 import Movement from "@/components/Movement.vue";
 
 export default {
   name: "Movements",
   components: {
-    Movement
+    Movement,
+    NavbarDesktop
   },
   data() {
     return {
