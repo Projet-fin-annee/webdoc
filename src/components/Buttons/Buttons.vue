@@ -1,14 +1,10 @@
 <template>
   <div class="buttons">
     <router-link to="/introduction">
-      <Button>
-        Immersion
-      </Button>
+      <Button>Immersion</Button>
     </router-link>
     <router-link to="/movements">
-      <Button type="outline">
-        Histoire
-      </Button>
+      <Button type="outline">Histoire</Button>
     </router-link>
   </div>
 </template>
