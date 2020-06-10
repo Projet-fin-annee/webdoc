@@ -1,5 +1,8 @@
 <template>
   <div class="tutorial">
+    <router-link to="/">
+      <BackButton>retour</BackButton>
+    </router-link>
     <p class="tutorial__instruction">
       Découvre
       <em>les mouvements réactionnaires</em> suite à la mort de George Floyd à travers le monde en cliquant sur les
@@ -29,20 +32,20 @@
       <Button class="tutorial__button">France</Button>
     </div>
     <router-link to="/WorldMap">
-      <Button type="outline" class="tutorial__next">
-        DÉCOUVRIR LA CARTE DU MONDE
-      </Button>
+      <Button type="outline" class="tutorial__next">DÉCOUVRIR LA CARTE DU MONDE</Button>
     </router-link>
   </div>
 </template>
 
 <script>
 import Button from "../components/Buttons/Button.vue";
+import BackButton from "../components/Buttons/BackButton.vue";
 
 export default {
   name: "Tutorial",
   components: {
-    Button
+    Button,
+    BackButton
   }
 };
 </script>

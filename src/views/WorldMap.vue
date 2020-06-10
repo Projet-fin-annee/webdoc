@@ -100,7 +100,7 @@ export default {
   overflow-x: hidden;
 
   @include large {
-    background-image: url("../assets/background2.png");
+    background-image: url("../assets/backgroundmap.png");
     width: 100%;
     height: 100vh;
     background-size: cover;
