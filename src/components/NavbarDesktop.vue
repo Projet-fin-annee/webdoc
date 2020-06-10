@@ -26,7 +26,7 @@ export default {
   },
   props: ["currentPage"],
   methods: {
-    progressBarSize: function() {
+    progressBarSize: function hello() {
       setTimeout(function() {
         const navBar = document.querySelector(".navbarDesktop__progressBar");
         const elemActive = document.querySelector(".active");
@@ -37,6 +37,9 @@ export default {
   },
   beforeMount() {
     this.progressBarSize();
+  },
+  mounted: function () {
+    window.addEventListener('resize', this.progressBarSize)
   }
 };
 </script>
