@@ -75,6 +75,7 @@ export default {
     margin-top: 100px;
   }
   &__mainTitle {
+    font-weight: 900;
     font-size: 22px;
     & span {
       color: $primary-color;
@@ -89,6 +90,7 @@ export default {
   &__subTitle {
     font-size: 16px;
     color: $light-grey;
+    margin-top: 8px;
     @include medium {
       font-size: 20px;
     }
