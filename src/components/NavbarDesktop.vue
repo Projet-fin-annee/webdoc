@@ -1,12 +1,15 @@
 <template>
-    <nav class="navbarDesktop">
-      <div class="navbarDesktop__progressBar"></div>
-        <ul class="navbarDesktop__items">
-          <li class="navbarDesktop__item" v-for="(item,index) in menuList" :key="index" >
-            <router-link :class="item.name == currentPage ? 'active' : ''" :to="{path:item.router}">{{item.name}}</router-link>
-          </li>
-        </ul>
-    </nav>
+  <nav class="navbarDesktop">
+    <div class="navbarDesktop__progressBar"></div>
+    <ul class="navbarDesktop__items">
+      <li class="navbarDesktop__item" v-for="(item,index) in menuList" :key="index">
+        <router-link
+          :class="item.name == currentPage ? 'active' : ''"
+          :to="{path:item.router}"
+        >{{item.name}}</router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -21,49 +24,47 @@ export default {
       ]
     };
   },
-   props: ["currentPage"],
+  props: ["currentPage"],
   methods: {
     progressBarSize: function() {
-      setTimeout(function(){
-      const navBar = document.querySelector('.navbarDesktop__progressBar');
-      const elemActive = document.querySelector('.active');
-      let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth;
-      navBar.style.width = `${valueWidth}px`;
-      }, 10) 
-
+      setTimeout(function() {
+        const navBar = document.querySelector(".navbarDesktop__progressBar");
+        const elemActive = document.querySelector(".active");
+        let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth;
+        navBar.style.width = `${valueWidth}px`;
+      }, 10);
     }
   },
- beforeMount(){
-    this.progressBarSize()
- }
-}
+  beforeMount() {
+    this.progressBarSize();
+  }
+};
 </script>
 
 <style lang="scss">
-@import '../scss/style.scss';
+@import "../scss/style.scss";
 
-.navbarDesktop{
+.navbarDesktop {
   display: none;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.580);
-  @include large{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  @include large {
     display: block;
   }
-  &__progressBar{
+  &__progressBar {
     height: 2px;
     background-color: $primary-color;
   }
-  &__items{
+  &__items {
     display: flex;
-    height: 100%;
+    height: 50px;
     width: 70%;
     align-items: center;
     justify-content: space-evenly;
   }
-  a.active{
+  a.active {
     color: $primary-color;
     font-weight: bold;
   }
