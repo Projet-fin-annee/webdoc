@@ -58,7 +58,7 @@ export default {
     background-color: $primary-color;
   }
   &__menu {
-    transition: 0.3s all ease-in-out;
+    transition: 0.8s all ease-in-out;
     position: absolute;
     background-color: $primary-color;
     opacity: 1;
@@ -71,11 +71,13 @@ export default {
     display: flex;
 
     &.close {
-      transform: translateX(100%);
+      transform: translate(100%,-100%);
+      border-radius: 100%;
       visibility: hidden;
     }
     &.open {
-      transform: translateX(0);
+      transform: translate(0);
+      border-radius: 0;
       visibility: visible;
     }
   }
