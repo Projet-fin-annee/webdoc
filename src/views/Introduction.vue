@@ -1,5 +1,6 @@
 <template>
   <div class="introduction">
+    <audio src="../assets/audio/typing2.mp3" autoplay></audio>
     <router-link to="/">
       <BackButton>retour</BackButton>
     </router-link>
