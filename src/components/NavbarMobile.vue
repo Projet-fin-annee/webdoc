@@ -39,7 +39,7 @@ export default {
 @import "../scss/style.scss";
 
 .navbarMobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 6;
   width: 100%;
