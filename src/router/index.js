@@ -8,7 +8,7 @@ import Introduction from '../views/Introduction.vue';
 // import Definitions from '../views/Definitions.vue';
 // import Immersion from '../views/Immersion.vue';
 import Tutorial from '../views/Tutorial.vue';
-// import WorldMap from '../views/WorldMap.vue';
+import WorldMap from '../views/WorldMap.vue';
 // import Country from '../views/Country.vue';
 import Movements from '../views/Movements.vue';
 
@@ -26,7 +26,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
-   {
+  {
     path: '/introduction',
     name: 'Introduction',
     component: Introduction
@@ -41,11 +41,11 @@ const routes = [
   //   name: 'Immersion',
   //   component: Immersion
   // }
-  // {
-  //   path: '/worldMap',
-  //   name: 'WorldMap',
-  //   component: WorldMap
-  // },
+  {
+    path: '/worldMap',
+    name: 'WorldMap',
+    component: WorldMap
+  },
   // {
   //   path: '/country',
   //   name: 'Country',
