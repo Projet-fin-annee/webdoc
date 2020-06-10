@@ -1,7 +1,7 @@
 <template>
   <div class="worldmap">
     <NavbarMobile></NavbarMobile>
-    <NavbarDesktop></NavbarDesktop>
+    <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
     <WorldmapMobile
       :path="detailsWorldMap.path.US"
       :image="detailsWorldMap.image.US"
