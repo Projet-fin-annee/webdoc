@@ -14,6 +14,12 @@ img {
 
 a {
   color: $neutral-white;
-  padding: 20px 0;
   text-decoration: none;
+  &:focus {
+    outline: 0;
+  }
+}
+
+button:focus {
+  outline: 0;
 }
