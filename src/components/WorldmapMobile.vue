@@ -27,6 +27,7 @@ export default {
   width: 100%;
   background-color: black;
   overflow: hidden;
+
   @include large {
     display: none;
   }
