@@ -1,5 +1,6 @@
 <template>
     <nav class="navbarDesktop">
+      <div class="navbarDesktop__progressBar"></div>
         <ul class="navbarDesktop__items">
           <li class="navbarDesktop__item" v-for="(item,index) in menuList" :key="index" >
             <router-link :class="item.name == currentPage ? 'active' : ''" :to="{path:item.router}">{{item.name}}</router-link>
@@ -20,7 +21,21 @@ export default {
       ]
     };
   },
-   props: ["currentPage"]
+   props: ["currentPage"],
+  methods: {
+    progressBarSize: function() {
+      setTimeout(function(){
+      const navBar = document.querySelector('.navbarDesktop__progressBar');
+      const elemActive = document.querySelector('.active');
+      let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth;
+      navBar.style.width = `${valueWidth}px`;
+      }, 10) 
+
+    }
+  },
+ beforeMount(){
+    this.progressBarSize()
+ }
 }
 </script>
 
@@ -36,6 +51,10 @@ export default {
     background-color: rgba(0, 0, 0, 0.580);
   @include large{
     display: block;
+  }
+  &__progressBar{
+    height: 2px;
+    background-color: $primary-color;
   }
   &__items{
     display: flex;
