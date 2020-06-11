@@ -155,7 +155,6 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      align-items: center;
     }
     &__buttons {
       display: flex;
@@ -163,6 +162,7 @@ export default {
       align-items: flex-start;
       justify-content: space-around;
       height: 40%;
+      margin-top: 20vh;
     }
     &__title {
       margin-top: 40px;
