@@ -27,10 +27,10 @@
       :hashtag="detailsWorldMap.hashtag.NZ"
     ></WorldmapMobile>
     <WorldmapMobile
-      :path="detailsWorldMap.path.BR"
-      :image="detailsWorldMap.image.BR"
-      :country="detailsWorldMap.country.BR"
-      :hashtag="detailsWorldMap.hashtag.BR"
+      :path="detailsWorldMap.path.UK"
+      :image="detailsWorldMap.image.UK"
+      :country="detailsWorldMap.country.UK"
+      :hashtag="detailsWorldMap.hashtag.UK"
     ></WorldmapMobile>
     <WorldmapMobile
       :path="detailsWorldMap.path.HW"
@@ -94,7 +94,7 @@ export default {
           FR: "/",
           CA: "/",
           NZ: "/",
-          BR: "/",
+          UK: "/",
           HW: "/"
         },
         image: {
@@ -102,7 +102,7 @@ export default {
           FR: "france.png",
           CA: "canada.png",
           NZ: "newzealand.png",
-          BR: "brazil.png",
+          UK: "brazil.png",
           HW: "hawai.png"
         },
         country: {
@@ -110,7 +110,7 @@ export default {
           FR: "FRANCE",
           CA: "CANADA",
           NZ: "NOUVELLE ZELANDE",
-          BR: "BRÉSIL",
+          UK: "UNITED KINGDOM",
           HW: "HAWAÏ"
         },
         hashtag: {
@@ -118,7 +118,7 @@ export default {
           FR: "LE COMBAT ADAMA",
           CA: "LE COMBAT ADAMA",
           NZ: "HASTAG",
-          BR: "HASTAG",
+          UK: "HASTAG",
           HW: "HASHTAG"
         }
       }
