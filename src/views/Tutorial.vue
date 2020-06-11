@@ -57,12 +57,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100vh;
   background-image: url("../assets/background2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @include backgroundCenter;
   &__instruction {
     font-size: 16px;
     width: 80%;

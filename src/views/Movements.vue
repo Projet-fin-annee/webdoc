@@ -21,7 +21,7 @@
       :chapter="detailsMovement.chapter.blm"
       :title="detailsMovement.title.blm"
     ></Movement>
-    <NavbarDesktop currentPage= "L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
+    <NavbarDesktop currentPage="L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
     <NavbarMobile></NavbarMobile>
   </div>
 </template>
@@ -81,13 +81,9 @@ a {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
-  width: 100%;
   overflow: hidden;
   background-image: url("../assets/texture.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @include backgroundCenter;
   @include large {
     flex-direction: row;
   }
