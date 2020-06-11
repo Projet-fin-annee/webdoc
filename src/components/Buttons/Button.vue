@@ -32,7 +32,8 @@ button {
   transition: 0.4s ease-in-out;
 
   &:hover {
-    border-radius: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(255, 126, 126, 0.2);
   }
 
   @include medium {
