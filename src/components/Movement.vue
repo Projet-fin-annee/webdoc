@@ -1,7 +1,7 @@
 <template>
   <router-link :to="path">
     <div class="movement">
-      <img :src="require(`@/assets/${image}`)" class="movement__image" />
+      <img :src="require(`@/assets/${image}`)" class="movement__image" alt="imageOfMouvementBackGround"/>
       <div class="movement__details">
         <p class="movement__date">{{ date }}</p>
         <p class="movement__chapter">{{ chapter }}</p>
