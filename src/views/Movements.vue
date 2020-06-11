@@ -1,25 +1,11 @@
 <template>
   <div class="movements">
-    <Movement
-      :path="detailsMovement.path.afm"
-      :image="detailsMovement.image.afm"
-      :date="detailsMovement.date.afm"
-      :chapter="detailsMovement.chapter.afm"
-      :title="detailsMovement.title.afm"
-    ></Movement>
-    <Movement
-      :path="detailsMovement.path.bp"
-      :image="detailsMovement.image.bp"
-      :date="detailsMovement.date.bp"
-      :chapter="detailsMovement.chapter.bp"
-      :title="detailsMovement.title.bp"
-    ></Movement>
-    <Movement
-      :path="detailsMovement.path.blm"
-      :image="detailsMovement.image.blm"
-      :date="detailsMovement.date.blm"
-      :chapter="detailsMovement.chapter.blm"
-      :title="detailsMovement.title.blm"
+    <Movement v-for="detail in detailsMovement" :key="detail.id"
+      :path="detail.path"
+      :image="detail.image"
+      :date="detail.date"
+      :chapter="detail.chapter"
+      :title="detail.title"
     ></Movement>
     <NavbarDesktop currentPage="L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
     <NavbarMobile></NavbarMobile>
@@ -40,33 +26,31 @@ export default {
   },
   data() {
     return {
-      detailsMovement: {
-        path: {
-          afm: "/movements/AfroAmerica",
-          bp: "/movements/BlackPanthers",
-          blm: "/movements/BlackLivesMatter"
-        },
-        image: {
-          afm: "movementafro.png",
-          bp: "blackpanthers.png",
-          blm: "blm.png"
-        },
-        date: {
-          afm: "1954 - 1968",
-          bp: "1966 - 1981",
-          blm: "2013 - aujourd'hui"
-        },
-        chapter: {
-          afm: "I",
-          bp: "II",
-          blm: "III"
-        },
-        title: {
-          afm: "Mouvement Afro-Américain des droits civiques",
-          bp: "Black Panthers",
-          blm: "BLACK LIVES MATTER"
-        }
+      detailsMovement: [{
+        id: "afm",
+        path: "/movements/AfroAmerica",
+        image: "movementafro.png",
+        date: "1954 - 1968",
+        chapter: "I",
+        title: "Mouvement Afro-Américain des droits civiques"
+      },
+      {
+        id: "bp",
+        path: "/movements/BlackPanthers",
+        image: "blackpanthers.png",
+        date: "1966 - 1981",
+        chapter: "II",
+        title: "Black Panthers"
+      },
+      {
+        id: "blm",
+        path: "/movements/BlackLivesMatter",
+        image: "blm.png",
+        date: "2013 - aujourd'hui",
+        chapter: "III",
+        title: "BLACK LIVES MATTER"
       }
+      ]
     };
   }
 };
