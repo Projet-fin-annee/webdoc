@@ -1,7 +1,7 @@
 <template>
   <router-link :to="path ">
     <div class="worldmapMobile">
-      <img :src="require(`@/assets/${image}`)" class="worldmapMobile__image" />
+      <img :src="require(`@/assets/${image}`)" class="worldmapMobile__image" alt="imageOfLandBackground"/>
       <div class="worldmapMobile__details">
         <h2 class="worldmapMobile__country">{{ country }}</h2>
         <p class="worldmapMobile__hashtag">#{{ hashtag }}</p>
