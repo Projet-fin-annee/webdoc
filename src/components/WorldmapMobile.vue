@@ -44,6 +44,9 @@ export default {
     min-height: 100%;
     opacity: 0.6;
     object-fit: cover;
+    &:hover{
+      transform: scale(1.2);
+    }
   }
   &__details {
     position: absolute;
