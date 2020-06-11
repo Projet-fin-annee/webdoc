@@ -2,42 +2,13 @@
   <div class="worldmap">
     <NavbarMobile></NavbarMobile>
     <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.US"
-      :image="detailsWorldMap.image.US"
-      :country="detailsWorldMap.country.US"
-      :hashtag="detailsWorldMap.hashtag.US"
-    ></WorldmapMobile>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.FR"
-      :image="detailsWorldMap.image.FR"
-      :country="detailsWorldMap.country.FR"
-      :hashtag="detailsWorldMap.hashtag.FR"
-    ></WorldmapMobile>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.CA"
-      :image="detailsWorldMap.image.CA"
-      :country="detailsWorldMap.country.CA"
-      :hashtag="detailsWorldMap.hashtag.CA"
-    ></WorldmapMobile>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.NZ"
-      :image="detailsWorldMap.image.NZ"
-      :country="detailsWorldMap.country.NZ"
-      :hashtag="detailsWorldMap.hashtag.NZ"
-    ></WorldmapMobile>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.UK"
-      :image="detailsWorldMap.image.UK"
-      :country="detailsWorldMap.country.UK"
-      :hashtag="detailsWorldMap.hashtag.UK"
-    ></WorldmapMobile>
-    <WorldmapMobile
-      :path="detailsWorldMap.path.HW"
-      :image="detailsWorldMap.image.HW"
-      :country="detailsWorldMap.country.HW"
-      :hashtag="detailsWorldMap.hashtag.HW"
-    ></WorldmapMobile>
+    <WorldmapMobile v-for="land in lands" :key="land.id"
+     :path="land.path"
+     :image="land.image"
+     :country="land.country"
+     :hashtag="land.hashtag"
+     >
+     </WorldmapMobile>
     <div class="worldmapDesktop">
       <h1 class="worldmapDesktop__title">
         LES MOUVEMENTS REACTIONNAIRES DANS LE MONDE
@@ -88,40 +59,50 @@ export default {
   },
   data() {
     return {
-      detailsWorldMap: {
-        path: {
-          US: "/movements/AfroAmerica",
-          FR: "/",
-          CA: "/",
-          NZ: "/",
-          UK: "/",
-          HW: "/"
+      lands: [
+        {
+          id: "US",
+          path: "/movements/AfroAmerica",
+          image: "unitedstates.png",
+          country: "ETATS-UNIS",
+          hashtag: "LA SOURCE"
         },
-        image: {
-          US: "unitedstates.png",
-          FR: "france.png",
-          CA: "canada.png",
-          NZ: "newzealand.png",
-          UK: "brazil.png",
-          HW: "hawai.png"
+        {
+          id: "FR",
+          path: "/",
+          image: "france.png",
+          country: "FRANCE",
+          hashtag: "LE COMBAT ADAMA"
         },
-        country: {
-          US: "ETATS-UNIS",
-          FR: "FRANCE",
-          CA: "CANADA",
-          NZ: "NOUVELLE ZELANDE",
-          UK: "ROYAUME-UNI",
-          HW: "HAWAÏ"
+        {
+          id: "CA",
+          path: "/",
+          image: "canada.png",
+          country: "CANADA",
+          hashtag: "LE COMBAT ADAMA"
         },
-        hashtag: {
-          US: "LA SOURCE",
-          FR: "LE COMBAT ADAMA",
-          CA: "LE COMBAT ADAMA",
-          NZ: "HASTAG",
-          UK: "HASTAG",
-          HW: "HASHTAG"
+        {
+          id: "NZ",
+          path: "/",
+          image: "newzealand.png",
+          country: "NOUVELLE ZELANDE",
+          hashtag: "HASHTAG"
+        },
+        {
+          id: "UK",
+          path: "/",
+          image: "brazil.png",
+          country: "ROYAUME-UNI",
+          hashtag: "HASHTAG"
+        },
+        {
+          id: "HW",
+          path: "/",
+          image: "hawai.png",
+          country: "HAWAÏ",
+          hashtag: "HASHTAG"
         }
-      }
+        ],
     };
   }
 };
