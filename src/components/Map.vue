@@ -1557,10 +1557,11 @@ export default {};
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 70%;
   overflow: hidden;
 
   &__svg {
-    width: 900px;
+    width: 100%;
     height: 100%;
   }
 }
