@@ -64,14 +64,11 @@ export default {
     opacity: 1;
     visibility: hidden;
     text-align: left;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     width: 100%;
     height: 100vh;
-    display: flex;
-
     &.close {
-      transform: translate(100%,-100%);
+      transform: translate(100%, -100%);
       border-radius: 100%;
       visibility: hidden;
     }
