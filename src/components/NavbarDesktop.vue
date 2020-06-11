@@ -61,6 +61,7 @@ export default {
     background-color: $primary-color;
   }
   &__items {
+    font-size: 14px;
     display: flex;
     height: 50px;
     width: 70%;
