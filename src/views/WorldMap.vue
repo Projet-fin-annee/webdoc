@@ -110,7 +110,7 @@ export default {
           FR: "FRANCE",
           CA: "CANADA",
           NZ: "NOUVELLE ZELANDE",
-          UK: "UNITED KINGDOM",
+          UK: "ROYAUME-UNI",
           HW: "HAWAÏ"
         },
         hashtag: {
