@@ -54,7 +54,7 @@ export default {
         date: {
           afm: "1954 - 1968",
           bp: "1966 - 1981",
-          blm: "1966 - aujourd'hui"
+          blm: "2013 - aujourd'hui"
         },
         chapter: {
           afm: "I",
