@@ -38,6 +38,35 @@
       :country="detailsWorldMap.country.HW"
       :hashtag="detailsWorldMap.hashtag.HW"
     ></WorldmapMobile>
+    <div class="worldmapDesktop">
+      <h1 class="worldmapDesktop__title">
+        LES MOUVEMENTS REACTIONNAIRES DANS LE MONDE
+        SUITE A LA MORT DE GEORGE FLOYD
+      </h1>
+      <div class="worldmapDesktop__details">
+        <Map></Map>
+        <div class="worldmapDesktop__buttons">
+          <router-link to="/">
+            <Button>ETATS-UNIS</Button>
+          </router-link>
+          <router-link to="/">
+            <Button>FRANCE</Button>
+          </router-link>
+          <router-link to="/">
+            <Button>CANADA</Button>
+          </router-link>
+          <router-link to="/">
+            <Button>ANGLETERRE</Button>
+          </router-link>
+          <router-link to="/">
+            <Button>NEW ZEALAND</Button>
+          </router-link>
+          <router-link to="/">
+            <Button>HAWAI</Button>
+          </router-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,12 +74,17 @@
 import NavbarMobile from "@/components/NavbarMobile";
 import NavbarDesktop from "@/components/NavbarDesktop";
 import WorldmapMobile from "@/components/WorldmapMobile";
+import Map from "@/components/Map";
+import Button from "../components/Buttons/Button.vue";
+
 export default {
   name: "WorldMap",
   components: {
     NavbarDesktop,
     NavbarMobile,
-    WorldmapMobile
+    WorldmapMobile,
+    Map,
+    Button
   },
   data() {
     return {
@@ -106,6 +140,36 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+
+  .worldmapDesktop {
+    display: none;
+    @include large {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+    }
+    &__details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 40%;
+    }
+    &__title {
+      margin-top: 40px;
+
+      font-size: 26px;
+      font-weight: 600;
+    }
   }
 }
 </style>
