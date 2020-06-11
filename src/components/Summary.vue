@@ -59,7 +59,7 @@ export default {
     }
   }
   &__menu {
-    transition: .4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
     position: absolute;
     background-color: $primary-color;
     top: 0;
@@ -68,11 +68,9 @@ export default {
     transform: translateX(-100%);
     visibility: hidden;
     text-align: left;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     width: 100%;
     height: 100vh;
-    display: flex;
     @include medium {
       width: 300px;
       height: 100vh;
@@ -88,15 +86,15 @@ export default {
       visibility: visible;
     }
   }
-    &__links{
-      height: 40vh;
-    }
-    &__items{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 100%;
-    }
+  &__links {
+    height: 40vh;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
   &__close {
     position: absolute;
     top: 20px;

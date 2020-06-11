@@ -20,9 +20,7 @@ export default {
 @import "../scss/style.scss";
 
 .worldmapMobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   height: calc(100vh / 3);
   width: 100%;
   background-color: black;
@@ -44,7 +42,7 @@ export default {
     min-height: 100%;
     opacity: 0.6;
     object-fit: cover;
-    &:hover{
+    &:hover {
       transform: scale(1.2);
     }
   }

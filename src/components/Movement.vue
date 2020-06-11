@@ -1,14 +1,14 @@
 <template>
-    <router-link :to="path">
-      <div class="movement">
-          <img :src="require(`@/assets/${image}`)" class="movement__image" />
-          <div class="movement__details">
-            <p class="movement__date">{{ date }}</p>
-            <p class="movement__chapter">{{ chapter }}</p>
-            <h2 class="movement__title">{{ title }}</h2>
-          </div>
+  <router-link :to="path">
+    <div class="movement">
+      <img :src="require(`@/assets/${image}`)" class="movement__image" />
+      <div class="movement__details">
+        <p class="movement__date">{{ date }}</p>
+        <p class="movement__chapter">{{ chapter }}</p>
+        <h2 class="movement__title">{{ title }}</h2>
       </div>
-    </router-link>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -21,18 +21,16 @@ export default {
 @import "../scss/style.scss";
 
 .movement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   width: 100%;
   height: calc(100vh / 3);
   opacity: 1;
   overflow: hidden;
-  @include medium{
-  cursor: pointer;
+  @include medium {
+    cursor: pointer;
     &:hover {
       opacity: 1;
-      .movement__image{
+      .movement__image {
         transform: scale(1.1);
         opacity: 1;
       }
