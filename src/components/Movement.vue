@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/style.scss';
 .movement {
   @include flexCenter;
   width: 100%;
@@ -39,6 +40,7 @@ export default {
     }
   }
   @include large {
+    width: calc(100% / 3);
     height: 100vh;
     opacity: 0.6;
     transition: 0.6s all;
@@ -54,8 +56,8 @@ export default {
     width: 100%;
     min-height: 100%;
     opacity: 0.6;
+    object-fit: cover;
     @include large {
-      object-fit: cover;
       opacity: 0.7;
     }
   }
