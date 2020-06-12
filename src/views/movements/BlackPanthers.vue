@@ -1,8 +1,35 @@
-<template></template>
+<template>
+  <div class="movement">
+    <TextStroke type="whiteStroke">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
+      porro mollitia eligendi <span class="pink">quos</span>ipsam molestias
+      illum animi earum omnis qui voluptates culpa incidunt placeat
+      <span class="white">beatae ea, laudantium nobis</span>
+      tempore!
+    </TextStroke>
+    <TextStroke type="pinkStroke"
+      >Lorem ipsum dolor sit amet consectetur, adipisicing
+      <span class="pink">elit.</span>Quaerat nobis maxime
+    </TextStroke>
+  </div>
+</template>
 
 <script>
-export default {};
+import TextStroke from '@/components/TextStroke.vue';
+
+export default {
+  components: {
+    TextStroke
+  }
+};
 </script>
 
-<style>
+<style lang="scss">
+@import '../../scss/style.scss';
+
+.movement {
+  @include backgroundCenter;
+  background-image: url('../../assets/background2.png');
+  flex-direction: column;
+}
 </style>

@@ -3,16 +3,17 @@ import VueRouter from 'vue-router';
 
 // VIEWS IMPORT
 import Home from '../views/Home.vue';
-import Introduction from '../views/Introduction.vue';
 
-// import Definitions from '../views/Definitions.vue';
+import Introduction from '../views/Introduction.vue';
 import Immersion from '../views/Immersion.vue';
+
 import Tutorial from '../views/Tutorial.vue';
 import WorldMap from '../views/WorldMap.vue';
 // import Country from '../views/Country.vue';
-import Movements from '../views/Movements.vue';
 
-// import AfroAmerica from '../views/movements/AfroAmerica.vue';
+import Movements from '../views/Movements.vue';
+import AfroAmerica from '../views/movements/AfroAmerica.vue';
+import BlackPanthers from '../views/movements/BlackPanthers.vue';
 import BlackLivesMatter from '../views/movements/BlackLivesMatter.vue';
 
 import Conclusion from '../views/Conclusion.vue';
@@ -32,11 +33,6 @@ const routes = [
     name: 'Introduction',
     component: Introduction
   },
-  // {
-  //   path: '/definitions',
-  //   name: 'Definitions',
-  //   component: Definitions
-  // },
   {
     path: '/immersion',
     name: 'Immersion',
@@ -62,16 +58,16 @@ const routes = [
     name: 'Movements',
     component: Movements
   },
-  // {
-  //   path: '/movements/afro-america',
-  //   name: 'Afro-America',
-  //   component: AfroAmerica
-  // }
-  // {
-  //   path: '/movements/black-panthers',
-  //   name: 'Black-Panthers',
-  //   component: BlackPanthers
-  // },
+  {
+    path: '/movements/AfroAmerica',
+    name: 'Afro-America',
+    component: AfroAmerica
+  },
+  {
+    path: '/movements/BlackPanthers',
+    name: 'Black-Panthers',
+    component: BlackPanthers
+  },
   {
     path: '/movements/BlackLivesMatter',
     name: 'Black-Lives-Matter',
