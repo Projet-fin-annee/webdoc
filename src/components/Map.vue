@@ -1550,8 +1550,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .map {
   display: flex;
   justify-content: center;

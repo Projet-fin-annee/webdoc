@@ -1,6 +1,10 @@
 <template>
   <div class="backButton">
-    <img class="backButton__arrow" src="../../assets/icons/arrow-right.svg" alt="arrow right" />
+    <img
+      class="backButton__arrow"
+      src="../../assets/icons/arrow-right.svg"
+      alt="arrow right"
+    />
     <slot></slot>
   </div>
 </template>
@@ -10,7 +14,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
 .backButton {
   color: white;
   position: absolute;

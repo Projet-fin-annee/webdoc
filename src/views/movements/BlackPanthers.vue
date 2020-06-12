@@ -25,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../scss/style.scss';
-
 .movement {
   @include backgroundCenter;
   background-image: url('../../assets/background2.png');

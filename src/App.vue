@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SoundButton from "@/components/SoundButton.vue";
+import SoundButton from '@/components/SoundButton.vue';
 
 export default {
   components: {
@@ -18,8 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./scss/style.scss";
-
 #app {
   font-family: Arial, sans-serif;
   text-align: center;

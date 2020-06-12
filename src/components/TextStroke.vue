@@ -13,8 +13,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/style.scss';
-
 .movement__text {
   color: transparent;
   text-transform: uppercase;

@@ -5,8 +5,9 @@
     </router-link>
     <p class="tutorial__instruction">
       Découvre
-      <em>les mouvements réactionnaires</em> suite à la mort de George Floyd à travers le monde en cliquant sur les
-      <span>boutons</span> correspondant aux pays en
+      <em>les mouvements réactionnaires</em> suite à la mort de George Floyd à
+      travers le monde en cliquant sur les <span>boutons</span> correspondant
+      aux pays en
       <span>rose.</span>
     </p>
     <div class="tutorial__details">
@@ -32,17 +33,19 @@
       <Button class="tutorial__button">France</Button>
     </div>
     <router-link to="/WorldMap">
-      <Button type="outline" class="tutorial__next">DÉCOUVRIR LA CARTE DU MONDE</Button>
+      <Button type="outline" class="tutorial__next"
+        >DÉCOUVRIR LA CARTE DU MONDE</Button
+      >
     </router-link>
   </div>
 </template>
 
 <script>
-import Button from "../components/Buttons/Button.vue";
-import BackButton from "../components/Buttons/BackButton.vue";
+import Button from '../components/Buttons/Button.vue';
+import BackButton from '../components/Buttons/BackButton.vue';
 
 export default {
-  name: "Tutorial",
+  name: 'Tutorial',
   components: {
     Button,
     BackButton
@@ -51,13 +54,12 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
 .tutorial {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url("../assets/background2.png");
+  background-image: url('../assets/background2.png');
   @include backgroundCenter;
   &__instruction {
     font-size: 16px;
@@ -90,4 +92,4 @@ export default {
     pointer-events: none;
   }
 }
-</style>    
+</style>

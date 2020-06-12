@@ -16,32 +16,34 @@ Suite à ce meurte, de partout dans le monde, les cris des militants résonnent,
       ></vue-typer>
     </div>
     <router-link to="/tutorial">
-      <Button class="introduction__button" type="outline">PASSER L’INTRODUCTION</Button>
+      <Button class="introduction__button" type="outline"
+        >PASSER L’INTRODUCTION</Button
+      >
     </router-link>
   </div>
 </template>
 
 <script>
-import Button from "../components/Buttons/Button.vue";
-import BackButton from "../components/Buttons/BackButton.vue";
+import Button from '../components/Buttons/Button.vue';
+import BackButton from '../components/Buttons/BackButton.vue';
 export default {
-  name: "Introduction",
+  name: 'Introduction',
   components: {
     Button,
     BackButton
   }
 };
-</script>char custom typed
+</script>
+char custom typed
 
-<style lang='scss'>
-@import "../scss/style.scss";
+<style lang="scss">
 .introduction {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url("../assets/background2.png");
+  background-image: url('../assets/background2.png');
   @include backgroundCenter;
 
   &__texts {

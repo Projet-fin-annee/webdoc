@@ -44,7 +44,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/style.scss';
 .homeVideo {
   z-index: 3;
   position: fixed;
