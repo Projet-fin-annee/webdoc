@@ -40,7 +40,6 @@ export default {
     }
   }
   @include large {
-    width: calc(100% / 3);
     height: 100vh;
     opacity: 0.6;
     transition: 0.6s all;

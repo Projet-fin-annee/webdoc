@@ -1,5 +1,5 @@
 <template>
-  <div class="movement">
+  <div class="afroAmerica">
     <TextStroke type="whiteStroke">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
       porro mollitia eligendi <span class="pink">quos</span>ipsam molestias
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-.movement {
+.afroAmerica {
   @include backgroundCenter;
   background-image: url('../../assets/background2.png');
 }
