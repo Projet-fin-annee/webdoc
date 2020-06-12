@@ -6,13 +6,14 @@ import Home from '../views/Home.vue';
 import Introduction from '../views/Introduction.vue';
 
 // import Definitions from '../views/Definitions.vue';
-// import Immersion from '../views/Immersion.vue';
+import Immersion from '../views/Immersion.vue';
 import Tutorial from '../views/Tutorial.vue';
 import WorldMap from '../views/WorldMap.vue';
 // import Country from '../views/Country.vue';
 import Movements from '../views/Movements.vue';
 
 // import AfroAmerica from '../views/movements/AfroAmerica.vue';
+import BlackLivesMatter from '../views/movements/BlackLivesMatter.vue';
 
 import Conclusion from '../views/Conclusion.vue';
 
@@ -36,11 +37,11 @@ const routes = [
   //   name: 'Definitions',
   //   component: Definitions
   // },
-  // {
-  //   path: '/immersion',
-  //   name: 'Immersion',
-  //   component: Immersion
-  // }
+  {
+    path: '/immersion',
+    name: 'Immersion',
+    component: Immersion
+  },
   {
     path: '/worldMap',
     name: 'WorldMap',
@@ -71,11 +72,11 @@ const routes = [
   //   name: 'Black-Panthers',
   //   component: BlackPanthers
   // },
-  // {
-  //   path: '/movements/black-lives-matter',
-  //   name: 'Black-Lives-Matter',
-  //   component: BlackLivesMatter
-  // },
+  {
+    path: '/movements/BlackLivesMatter',
+    name: 'Black-Lives-Matter',
+    component: BlackLivesMatter
+  },
   {
     path: '/conclusion',
     name: 'Conclusion',

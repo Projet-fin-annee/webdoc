@@ -1,8 +1,7 @@
-<template></template>
+<template>
+  <div class="dov"></div>
+</template>
 
-<script>
-export default {};
-</script>
+<script></script>
 
-<style>
-</style>
+<style></style>
