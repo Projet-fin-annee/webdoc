@@ -20,7 +20,11 @@
               src="../assets/icons/desktop.svg"
               alt="desktopIcons"
             />
-            <img class="home__userExperienceIcon" src="../assets/icons/cask.svg" alt="caskIcons" />
+            <img
+              class="home__userExperienceIcon"
+              src="../assets/icons/cask.svg"
+              alt="caskIcons"
+            />
           </div>
         </div>
       </div>
@@ -30,12 +34,12 @@
 
 <script>
 // @ is an alias to /src
-import VideoHome from "@/components/VideoHome.vue";
-import Summary from "@/components/Summary.vue";
-import Buttons from "@/components/Buttons/Buttons.vue";
+import VideoHome from '@/components/VideoHome.vue';
+import Summary from '@/components/Summary.vue';
+import Buttons from '@/components/Buttons/Buttons.vue';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     VideoHome,
     Buttons,
@@ -45,10 +49,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .home {
-  background-image: url("../assets/home.png");
+  background-image: url('../assets/home.png');
   @include backgroundCenter;
   color: $neutral-white;
   display: flex;

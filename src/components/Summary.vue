@@ -10,8 +10,14 @@
       />
       <nav class="summary__links">
         <ul class="summary__items">
-          <li class="summary__item" v-for="(item,index) in menuList" :key="index">
-            <router-link :to="{path:item.router}">{{item.name}}</router-link>
+          <li
+            class="summary__item"
+            v-for="(item, index) in menuList"
+            :key="index"
+          >
+            <router-link :to="{ path: item.router }">{{
+              item.name
+            }}</router-link>
           </li>
         </ul>
       </nav>
@@ -25,10 +31,10 @@ export default {
     return {
       isOpen: false,
       menuList: [
-        { name: "ACCUEIL", router: "/" },
-        { name: "L'HISTOIRE DES MOUVEMENTS", router: "/movements" },
-        { name: "CARTE DES PROTESTATIONS", router: "/worldMap" },
-        { name: "CONCLUSION", router: "/conclusion" }
+        { name: 'ACCUEIL', router: '/' },
+        { name: "L'HISTOIRE DES MOUVEMENTS", router: '/movements' },
+        { name: 'CARTE DES PROTESTATIONS', router: '/worldMap' },
+        { name: 'CONCLUSION', router: '/conclusion' }
       ]
     };
   }
@@ -36,8 +42,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .summary {
   margin-top: 30px;
   &__text {

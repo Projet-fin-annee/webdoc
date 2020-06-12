@@ -2,17 +2,19 @@
   <div class="worldmap">
     <NavbarMobile></NavbarMobile>
     <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
-    <WorldmapMobile v-for="land in lands" :key="land.id"
-     :path="land.path"
-     :image="land.image"
-     :country="land.country"
-     :hashtag="land.hashtag"
-     >
-     </WorldmapMobile>
+    <WorldmapMobile
+      v-for="land in lands"
+      :key="land.id"
+      :path="land.path"
+      :image="land.image"
+      :country="land.country"
+      :hashtag="land.hashtag"
+    >
+    </WorldmapMobile>
     <div class="worldmapDesktop">
       <h1 class="worldmapDesktop__title">
-        LES MOUVEMENTS REACTIONNAIRES DANS LE MONDE
-        SUITE A LA MORT DE GEORGE FLOYD
+        LES MOUVEMENTS REACTIONNAIRES DANS LE MONDE SUITE A LA MORT DE GEORGE
+        FLOYD
       </h1>
       <div class="worldmapDesktop__details">
         <Map></Map>
@@ -42,14 +44,14 @@
 </template>
 
 <script>
-import NavbarMobile from "@/components/NavbarMobile";
-import NavbarDesktop from "@/components/NavbarDesktop";
-import WorldmapMobile from "@/components/WorldmapMobile";
-import Map from "@/components/Map";
-import Button from "../components/Buttons/Button.vue";
+import NavbarMobile from '@/components/NavbarMobile';
+import NavbarDesktop from '@/components/NavbarDesktop';
+import WorldmapMobile from '@/components/WorldmapMobile';
+import Map from '@/components/Map';
+import Button from '../components/Buttons/Button.vue';
 
 export default {
-  name: "WorldMap",
+  name: 'WorldMap',
   components: {
     NavbarDesktop,
     NavbarMobile,
@@ -61,61 +63,59 @@ export default {
     return {
       lands: [
         {
-          id: "US",
-          path: "/movements/AfroAmerica",
-          image: "unitedstates.png",
-          country: "ETATS-UNIS",
-          hashtag: "LA SOURCE"
+          id: 'US',
+          path: '/movements/AfroAmerica',
+          image: 'unitedstates.png',
+          country: 'ETATS-UNIS',
+          hashtag: 'LA SOURCE'
         },
         {
-          id: "FR",
-          path: "/",
-          image: "france.png",
-          country: "FRANCE",
-          hashtag: "LE COMBAT ADAMA"
+          id: 'FR',
+          path: '/',
+          image: 'france.png',
+          country: 'FRANCE',
+          hashtag: 'LE COMBAT ADAMA'
         },
         {
-          id: "CA",
-          path: "/",
-          image: "canada.png",
-          country: "CANADA",
-          hashtag: "LE COMBAT ADAMA"
+          id: 'CA',
+          path: '/',
+          image: 'canada.png',
+          country: 'CANADA',
+          hashtag: 'LE COMBAT ADAMA'
         },
         {
-          id: "NZ",
-          path: "/",
-          image: "newzealand.png",
-          country: "NOUVELLE ZELANDE",
-          hashtag: "HASHTAG"
+          id: 'NZ',
+          path: '/',
+          image: 'newzealand.png',
+          country: 'NOUVELLE ZELANDE',
+          hashtag: 'HASHTAG'
         },
         {
-          id: "UK",
-          path: "/",
-          image: "brazil.png",
-          country: "ROYAUME-UNI",
-          hashtag: "HASHTAG"
+          id: 'UK',
+          path: '/',
+          image: 'brazil.png',
+          country: 'ROYAUME-UNI',
+          hashtag: 'HASHTAG'
         },
         {
-          id: "HW",
-          path: "/",
-          image: "hawai.png",
-          country: "HAWAÏ",
-          hashtag: "HASHTAG"
+          id: 'HW',
+          path: '/',
+          image: 'hawai.png',
+          country: 'HAWAÏ',
+          hashtag: 'HASHTAG'
         }
-        ],
+      ]
     };
   }
 };
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .worldmap {
   overflow-x: hidden;
 
   @include large {
-    background-image: url("../assets/backgroundmap.png");
+    background-image: url('../assets/backgroundmap.png');
     @include backgroundCenter;
   }
 

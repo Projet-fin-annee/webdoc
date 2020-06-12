@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
+import Button from './Button.vue';
 
 export default {
   components: {
@@ -20,7 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
 .buttons {
   width: 80%;
   display: flex;

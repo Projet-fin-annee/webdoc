@@ -17,8 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../scss/style.scss';
-
 button {
   padding: 8px 17px;
   border: none;

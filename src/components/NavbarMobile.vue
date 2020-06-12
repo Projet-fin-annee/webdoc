@@ -10,8 +10,14 @@
       />
       <nav class="navbarMobile__links">
         <ul class="navbarMobile__items">
-          <li class="navbarMobile__item" v-for="(item,index) in menuList" :key="index">
-            <router-link :to="{path:item.router}">{{item.name}}</router-link>
+          <li
+            class="navbarMobile__item"
+            v-for="(item, index) in menuList"
+            :key="index"
+          >
+            <router-link :to="{ path: item.router }">{{
+              item.name
+            }}</router-link>
           </li>
         </ul>
       </nav>
@@ -25,10 +31,10 @@ export default {
     return {
       isOpen: false,
       menuList: [
-        { name: "ACCUEIL", router: "/" },
-        { name: "L'HISTOIRE DES MOUVEMENTS", router: "/movements" },
-        { name: "CARTE DES PROTESTATIONS", router: "/worldMap" },
-        { name: "CONCLUSION", router: "/conclusion" }
+        { name: 'ACCUEIL', router: '/' },
+        { name: "L'HISTOIRE DES MOUVEMENTS", router: '/movements' },
+        { name: 'CARTE DES PROTESTATIONS', router: '/worldMap' },
+        { name: 'CONCLUSION', router: '/conclusion' }
       ]
     };
   }
@@ -36,8 +42,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .navbarMobile {
   position: fixed;
   top: 0;

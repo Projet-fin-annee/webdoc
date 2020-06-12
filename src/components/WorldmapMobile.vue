@@ -1,7 +1,11 @@
 <template>
-  <router-link :to="path ">
+  <router-link :to="path">
     <div class="worldmapMobile">
-      <img :src="require(`@/assets/${image}`)" class="worldmapMobile__image" alt="imageOfLandBackground"/>
+      <img
+        :src="require(`@/assets/${image}`)"
+        class="worldmapMobile__image"
+        alt="imageOfLandBackground"
+      />
       <div class="worldmapMobile__details">
         <h2 class="worldmapMobile__country">{{ country }}</h2>
         <p class="worldmapMobile__hashtag">#{{ hashtag }}</p>
@@ -12,13 +16,11 @@
 
 <script>
 export default {
-  props: ["path", "image", "country", "hashtag"]
+  props: ['path', 'image', 'country', 'hashtag']
 };
 </script>
 
 <style lang="scss">
-@import "../scss/style.scss";
-
 .worldmapMobile {
   @include flexCenter;
   height: calc(100vh / 3);
