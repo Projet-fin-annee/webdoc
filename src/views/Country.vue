@@ -3,8 +3,9 @@
     <div class="country__back"></div>
     <BackButton>retour à la carte</BackButton>
     <CountrySpeech></CountrySpeech>
-    <CountryIntro></CountryIntro>
     <IndicatorScroll></IndicatorScroll>
+
+    <CountryIntro></CountryIntro>
   </div>
 </template>
 
@@ -33,6 +34,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("../assets/texture2.png");
+  background-attachment: fixed;
   &__back {
     background-color: $primary-color;
     @include large {
