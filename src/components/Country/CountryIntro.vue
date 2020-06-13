@@ -21,7 +21,6 @@ export default {};
 <style lang="scss">
 .countryIntro {
   min-height: 100vh;
-
   padding-top: 110px;
   &__titles {
     text-transform: uppercase;
