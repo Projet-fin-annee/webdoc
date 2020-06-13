@@ -3,18 +3,21 @@
     <div class="country__back"></div>
     <BackButton>retour à la carte</BackButton>
     <CountrySpeech></CountrySpeech>
+    <IndicatorScroll></IndicatorScroll>
   </div>
 </template>
 
 <script>
 import BackButton from "../components/Buttons/BackButton.vue";
+import IndicatorScroll from "../components/Country/IndicatorScroll.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 
 export default {
   name: "Country",
   components: {
     CountrySpeech,
-    BackButton
+    BackButton,
+    IndicatorScroll
   }
 };
 </script>

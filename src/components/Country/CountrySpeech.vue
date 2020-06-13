@@ -15,7 +15,10 @@
           <h2
             class="countrySpeech__subtitle"
           >Discours de Tamika Mallory suite à la mort de George Floyd__ 01.06.2020</h2>
-          <div class="countrySpeech__listen"></div>
+          <div class="countrySpeech__listen">
+            <img src="../../assets/icons/play.svg" alt="svg play" />
+            <img src="../../assets/icons/hear.svg" alt="svg hearphone" />
+          </div>
         </div>
         <p class="countrySpeech__quote">
           “The reason why buildind are burning are not just for our brother George Floyd . They are burning down because peoples
@@ -36,7 +39,7 @@ export default {};
 .countrySpeech {
   height: 100vh;
   @include large {
-    padding-top: 80px;
+    padding-top: 120px;
   }
   &__title {
     @include large {
@@ -75,6 +78,12 @@ export default {};
       font-size: 27px;
       width: 60%;
     }
+  }
+  &__listen {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 20%;
   }
   &__quote {
     span {
