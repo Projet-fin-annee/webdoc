@@ -37,7 +37,8 @@ export default {};
 
 <style lang="scss">
 .countrySpeech {
-  height: 100vh;
+  min-height: 100vh;
+
   @include large {
     padding-top: 120px;
   }
