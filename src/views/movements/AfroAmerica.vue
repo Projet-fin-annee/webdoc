@@ -1,5 +1,11 @@
 <template>
   <div class="afroAmerica">
+    <TimelineBar>
+      <TimelineInfo
+      v-for="info in infos"
+      :key="info.id"
+      :date="info.date"></TimelineInfo>
+    </TimelineBar>
     <TextStroke type="whiteStroke">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
       porro mollitia eligendi <span class="pink">quos</span>ipsam molestias
@@ -15,11 +21,41 @@
 </template>
 
 <script>
-import TextStroke from '@/components/TextStroke.vue';
+import TextStroke from "@/components/TextStroke.vue";
+import TimelineBar from "@/components/Timeline/TimelineBar.vue";
+import TimelineInfo from "@/components/Timeline/TimelineInfo.vue";
 
 export default {
   components: {
-    TextStroke
+    TextStroke,
+    TimelineBar,
+    TimelineInfo
+  },
+    data() {
+    return {
+      infos: [
+        {
+          id: '1',
+          date: '1954'
+        },
+        {
+          id: '2',
+          date: '1954'
+        },
+        {
+          id: '3',
+          date: '1955'
+        },
+        {
+          id: '4',
+          date: '1956'
+        },
+        {
+          id: '5',
+          date: '1966'
+        }
+      ]
+    };
   }
 };
 </script>
