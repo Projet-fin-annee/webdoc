@@ -5,7 +5,6 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 
 import Introduction from '../views/Introduction.vue';
-import Immersion from '../views/Immersion.vue';
 
 import Tutorial from '../views/Tutorial.vue';
 import WorldMap from '../views/WorldMap.vue';
@@ -32,11 +31,6 @@ const routes = [
     path: '/introduction',
     name: 'Introduction',
     component: Introduction
-  },
-  {
-    path: '/immersion',
-    name: 'Immersion',
-    component: Immersion
   },
   {
     path: '/worldMap',

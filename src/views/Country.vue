@@ -5,6 +5,7 @@
     <CountrySpeech class="section1"></CountrySpeech>
     <IndicatorScroll></IndicatorScroll>
     <CountryIntro class="section2"></CountryIntro>
+    <CountryUprising class="section3"></CountryUprising>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import BackButton from "../components/Buttons/BackButton.vue";
 import IndicatorScroll from "../components/Country/IndicatorScroll.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
+import CountryUprising from "@/components/Country/CountryUprising.vue";
 
 export default {
   name: "Country",
@@ -23,7 +25,8 @@ export default {
     CountrySpeech,
     BackButton,
     IndicatorScroll,
-    CountryIntro
+    CountryIntro,
+    CountryUprising
   },
   data() {
     return {
@@ -124,10 +127,6 @@ export default {
 .section4,
 .section5 {
   min-height: 100vh;
-}
-
-.section3 {
-  background-color: red;
 }
 
 .section4 {
