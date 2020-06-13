@@ -1,5 +1,12 @@
 <template>
   <div class="blackLivesMatter">
+    <TimelineBar>
+      <TimelineInfo
+      v-for="info in infos"
+      :key="info.id"
+      :date="info.date"></TimelineInfo>
+    </TimelineBar>
+
     <TextStroke type="whiteStroke">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
       porro mollitia eligendi
@@ -21,10 +28,40 @@
 
 <script>
 import TextStroke from "@/components/TextStroke.vue";
+import TimelineBar from "@/components/Timeline/TimelineBar.vue";
+import TimelineInfo from "@/components/Timeline/TimelineInfo.vue";
 
 export default {
   components: {
-    TextStroke
+    TextStroke,
+    TimelineBar,
+    TimelineInfo
+  },
+    data() {
+    return {
+      infos: [
+        {
+          id: '1',
+          date: '2013'
+        },
+        {
+          id: '2',
+          date: '2014'
+        },
+        {
+          id: '3',
+          date: '08.2014'
+        },
+        {
+          id: '4',
+          date: '2017'
+        },
+        {
+          id: '5',
+          date: '2020'
+        }
+      ]
+    };
   }
 };
 </script>
