@@ -26,8 +26,12 @@ export default {
 
 <style lang="scss">
 .blackPanthers {
-  @include backgroundCenter;
-  background-image: url('../../assets/background2.png');
-  flex-direction: column;
+    width: 100%;;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../../assets/background2.png');
+    overflow-y: hidden;
+    background-attachment: fixed;
 }
 </style>
