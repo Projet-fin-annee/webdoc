@@ -9,7 +9,7 @@ import Immersion from '../views/Immersion.vue';
 
 import Tutorial from '../views/Tutorial.vue';
 import WorldMap from '../views/WorldMap.vue';
-// import Country from '../views/Country.vue';
+import Country from '../views/Country.vue';
 
 import Movements from '../views/Movements.vue';
 import AfroAmerica from '../views/movements/AfroAmerica.vue';
@@ -43,11 +43,11 @@ const routes = [
     name: 'WorldMap',
     component: WorldMap
   },
-  // {
-  //   path: '/country',
-  //   name: 'Country',
-  //   component: Country
-  // },
+  {
+    path: '/Country',
+    name: 'Country',
+    component: Country
+  },
   {
     path: '/tutorial',
     name: 'Tutorial',
