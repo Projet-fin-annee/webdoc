@@ -26,7 +26,8 @@ export default {
 
 <style lang="scss">
 .afroAmerica {
-    width: 100%;;
+    width: 100%;
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
