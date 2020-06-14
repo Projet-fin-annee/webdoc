@@ -22,7 +22,18 @@
 <script>
 import { gsap } from "gsap";
 
-export default {};
+export default {
+  mounted() {
+    gsap.from(
+      ".countryHero__cover",
+      10,
+      {
+        filter: "grayscale(100%)"
+      },
+      1
+    );
+  }
+};
 </script>
 
 <style lang="scss">
