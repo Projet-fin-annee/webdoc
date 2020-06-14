@@ -11,38 +11,42 @@
     </TimelineInfo>
     </TimelineBar>
     <transition name="fade">
-    <TextStroke type="whiteStroke" v-if="currentInfo == 1">
-     CRéations du mouvement suite a la<span class="white">mort de malcom x militantiste noir américain</span>
-     leurs but de <span class="white">combattre les injustices</span>
-      que subissent les  afro-AMéricainS AVEC UN programme en dix points a appelé à la cessation immédiate des
-      <span class="white">brutalités policières</span>; emploi pour les Afro-Américains; et la terre, le logement et la justice pour tous. 
+    <TextStroke type="pinkStroke" v-if="currentInfo == 1">
+     13 JUILLET 2013 CRéation du <span class="pink">#BLACKLIVESMATTER </span>
+     <span class="white">APPARU SUR TWITTER</span>
+     suite a l’acquitement du meurtier de 
+     <span class="pink">trayvon martin</span>
+     en floride Black Lives Matter se veut multiracial, intersectionnel, homosexuel, sans leader, sans relais politique, ni religieux. 
+     <span class="white">Afin que l’impunité des forces de l’ordre cesse</span>
+    , Black Lives Matter dénonce les
+    <span class="white">violences racistes.</span>
     </TextStroke>
     </transition>
     <transition name="fade">
     <TextStroke type="pinkStroke" v-if="currentInfo == 2">
-      Le FBI deploie des
-      <span class="pink">mesures de répressions</span>Déstinées aux communistes contre l’ORGANISATION jugée
-      <span class="pink">illégale</span>
+      PREMIERE MARCHES ET MANIFESTATIONS DE RUES 
+      <span class="white">INITIées dès la mort de michael brown</span>
     </TextStroke>
     </transition>
     <transition name="fade">
-    <TextStroke type="whiteStroke" v-if="currentInfo == 3">
-      <span class="white">+2000 membres des  BLACK PANTERS</span>
-       a travers le pays le poing levé vers le ciel, est leurs signe de protestation
+    <TextStroke type="pinkStroke" v-if="currentInfo == 3">
+      LE MOUVEMENT BLACK LIVES MATTER APPORTE SOUTIEN AU PEUPLE PALESTINIEN FACE à ISRAEL
     </TextStroke>
     </transition>
     <transition name="fade">
-    <TextStroke type="whiteStroke" v-if="currentInfo == 4">
-      <span class="white">ATTAQUE POLICIère au siège des black panters </span>
-       et se termine par la chute du siège suite a 4H D’AFFRONTEMENTS
+    <TextStroke type="pinkStroke" v-if="currentInfo == 4">
+      dans le cadre du Mois de l'histoire des Noirs , une 
+      <span class="pink">exposition d'art d'un mois "Black Lives Matter" </span>
+      . Le spectacle a présenté plus de 30 artistes multiculturels divers sur
+      <span class="pink">un thème explorant l'égalité raciale et la justice.</span>
     </TextStroke>
     </transition>
     <transition name="fade">
     <TextStroke type="pinkStroke" v-if="currentInfo == 5">
-      22 août 1969
-      <span class="pink">assassinnat</span>de
-      <span class="pink">HOEY P.NEWTON </span>
-      co-fondateur des black panters, le mouvement s’éteind peu a peu
+      SUITE A LA MORT DE 
+      <span class="pink">GEORGE FLOYD</span> LE MOUVEMENT
+      <span class="pink">BLACK LIVES MATTER </span>
+      S’EST EMPARé du mouvement Réclamant justice et respect.
     </TextStroke>
     </transition>
   </div>
