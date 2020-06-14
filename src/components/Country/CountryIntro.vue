@@ -56,7 +56,7 @@ export default {};
   &__text {
     text-align: left;
     @include large {
-      font-size: 18px;
+      font-size: 20px;
       width: 30%;
       line-height: 30px;
     }
