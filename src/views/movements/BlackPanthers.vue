@@ -4,18 +4,19 @@
       <TimelineInfo
       v-for="info in infos"
       :key="info.id"
-      :date="info.date"></TimelineInfo>
+      :date="info.date"
+      @click.native="currentInfo=info.id"></TimelineInfo>
     </TimelineBar>
-    <TextStroke type="whiteStroke">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
-      porro mollitia eligendi <span class="pink">quos</span>ipsam molestias
-      illum animi earum omnis qui voluptates culpa incidunt placeat
-      <span class="white">beatae ea, laudantium nobis</span>
-      tempore!
+    <TextStroke type="whiteStroke" v-if="currentInfo == 1">
+     CRéations du mouvement suite a la<span class="white">mort de malcom x militantiste noir américain</span>
+     leurs but de <span class="white">combattre les injustices</span>
+      que subissent les  afro-AMéricainS AVEC UN programme en dix points a appelé à la cessation immédiate des
+      <span class="white">brutalités policières</span>; emploi pour les Afro-Américains; et la terre, le logement et la justice pour tous. 
     </TextStroke>
-    <TextStroke type="pinkStroke"
-      >Lorem ipsum dolor sit amet consectetur, adipisicing
-      <span class="pink">elit.</span>Quaerat nobis maxime
+    <TextStroke type="pinkStroke" v-if="currentInfo == 2">
+      Le FBI deploie des
+      <span class="pink">mesures de répressions</span>Déstinées aux communistes contre l’ORGANISATION jugée
+      <span class="pink">illégale</span>
     </TextStroke>
   </div>
 </template>
@@ -33,6 +34,7 @@ export default {
   },
     data() {
     return {
+      currentInfo: 1,
       infos: [
         {
           id: '1',
