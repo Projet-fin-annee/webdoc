@@ -24,14 +24,15 @@ import { gsap } from "gsap";
 
 export default {
   mounted() {
-    gsap.from(
-      ".countryHero__cover",
-      10,
-      {
-        filter: "grayscale(100%)"
-      },
-      1
-    );
+    gsap.from(".countryHero__cover", 1, {
+      filter: "grayscale(100%)",
+      delay: 2
+    });
+    gsap.from(".countryHero__country", 1, {
+      textStroke: "2px white",
+      color: "transparent",
+      delay: 2
+    });
   }
 };
 </script>
