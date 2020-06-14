@@ -21,6 +21,12 @@ export default {
     width: 40px;
     cursor: pointer;
   }
+  &__details.active > .timeline__points{
+    background-color:$primary-color;
+  }
+  &__details.active > .timeline__text{
+    color:$primary-color;
+  }
   &__details.active{
     border-bottom: 2px solid $primary-color;
   }
