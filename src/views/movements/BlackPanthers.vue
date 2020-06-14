@@ -5,7 +5,10 @@
       v-for="info in infos"
       :key="info.id"
       :date="info.date"
-      @click.native="currentInfo=info.id"></TimelineInfo>
+      @click.native="currentInfo=info.id"
+      :class="currentInfo == info.id ? 'active' : ''"
+      >
+    </TimelineInfo>
     </TimelineBar>
     <TextStroke type="whiteStroke" v-if="currentInfo == 1">
      CRéations du mouvement suite a la<span class="white">mort de malcom x militantiste noir américain</span>
@@ -17,6 +20,20 @@
       Le FBI deploie des
       <span class="pink">mesures de répressions</span>Déstinées aux communistes contre l’ORGANISATION jugée
       <span class="pink">illégale</span>
+    </TextStroke>
+    <TextStroke type="whiteStroke" v-if="currentInfo == 3">
+      <span class="white">+2000 membres des  BLACK PANTERS</span>
+       a travers le pays le poing levé vers le ciel, est leurs signe de protestation
+    </TextStroke>
+    <TextStroke type="whiteStroke" v-if="currentInfo == 4">
+      <span class="white">ATTAQUE POLICIère au siège des black panters </span>
+       et se termine par la chute du siège suite a 4H D’AFFRONTEMENTS
+    </TextStroke>
+    <TextStroke type="pinkStroke" v-if="currentInfo == 5">
+      22 août 1969
+      <span class="pink">assassinnat</span>de
+      <span class="pink">HOEY P. NEWTON </span>
+      co-fondateur des black panters, le mouvement s’éteind peu a peu
     </TextStroke>
   </div>
 </template>
