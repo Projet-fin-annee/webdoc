@@ -1,11 +1,9 @@
 <template>
   <div class="country">
-    <div class="country__back"></div>
-    <BackButton>retour à la carte</BackButton>
-    <CountrySpeech class="section1"></CountrySpeech>
-    <IndicatorScroll></IndicatorScroll>
-    <CountryIntro class="section2"></CountryIntro>
-    <CountryUprising class="section3"></CountryUprising>
+    <CountryHero class="section1"></CountryHero>
+    <CountrySpeech class="section2"></CountrySpeech>
+    <CountryIntro class="section3"></CountryIntro>
+    <CountryUprising class="section4"></CountryUprising>
   </div>
 </template>
 
@@ -13,8 +11,7 @@
 var VueScrollTo = require("vue-scrollto");
 var debounce = require("debounce");
 
-import BackButton from "../components/Buttons/BackButton.vue";
-import IndicatorScroll from "../components/Country/IndicatorScroll.vue";
+import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
@@ -22,9 +19,8 @@ import CountryUprising from "@/components/Country/CountryUprising.vue";
 export default {
   name: "Country",
   components: {
+    CountryHero,
     CountrySpeech,
-    BackButton,
-    IndicatorScroll,
     CountryIntro,
     CountryUprising
   },
@@ -109,17 +105,6 @@ export default {
   background-position: center center;
   background-image: url("../assets/texture2.png");
   background-attachment: fixed;
-  &__back {
-    background-color: $primary-color;
-    @include large {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(50%);
-      width: 3px;
-      height: 40px;
-    }
-  }
 }
 .section1,
 .section2,
@@ -127,10 +112,6 @@ export default {
 .section4,
 .section5 {
   min-height: 100vh;
-}
-
-.section4 {
-  background-color: pink;
 }
 
 .section5 {

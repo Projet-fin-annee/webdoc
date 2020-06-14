@@ -1,5 +1,8 @@
 <template>
   <div class="countrySpeech">
+    <div class="countrySpeech__back"></div>
+
+    <BackButton>retour à la carte</BackButton>
     <h1 class="countrySpeech__title">“ENOUGH IS ENOUGH”</h1>
     <div class="countrySpeech__container">
       <img
@@ -28,19 +31,40 @@
         <p class="countrySpeech__author">TAMIKA MALLORY</p>
       </div>
     </div>
+    <IndicatorScroll></IndicatorScroll>
   </div>
 </template>
 
 <script>
-export default {};
+import IndicatorScroll from "./IndicatorScroll.vue";
+import BackButton from "../../components/Buttons/BackButton.vue";
+
+export default {
+  components: {
+    BackButton,
+    IndicatorScroll
+  }
+};
 </script>
 
 <style lang="scss">
 .countrySpeech {
   min-height: 100vh;
+  position: relative;
 
   @include large {
     padding-top: 120px;
+  }
+  &__back {
+    background-color: $primary-color;
+    @include large {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(50%);
+      width: 3px;
+      height: 40px;
+    }
   }
   &__title {
     @include large {
