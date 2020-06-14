@@ -18,7 +18,11 @@ export default {
     flex-direction: column;
     align-items: center;
     height: 40px;
+    width: 40px;
     cursor: pointer;
+  }
+  &__details.active{
+    border-bottom: 2px solid $primary-color;
   }
   &__points{
     width: 12px;
