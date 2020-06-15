@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss">
 .timeline{
-  margin: 60px 0px;
+  margin: 70px 0px;
   width: 100%;
   height: 1px;
   background-color: $neutral-white;

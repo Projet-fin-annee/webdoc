@@ -12,7 +12,7 @@
     </TimelineBar>
     <transition name="fade">
     <TextStroke type="whiteStroke" v-if="currentInfo == 1">
-     CRéations du mouvement suite a la<span class="white">mort de malcom x militantiste noir américain</span>
+     CRéations du mouvement suite a la<span class="white"> mort de malcom x militantiste noir américain</span>
      leurs but de <span class="white">combattre les injustices</span>
       que subissent les  afro-AMéricainS AVEC UN programme en dix points a appelé à la cessation immédiate des
       <span class="white">brutalités policières</span>; emploi pour les Afro-Américains; et la terre, le logement et la justice pour tous. 

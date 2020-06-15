@@ -17,6 +17,7 @@ export default {
 <style lang="scss">
 .movement__text {
   color: transparent;
+  margin: 0px 30px 30px 30px;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 14px;
@@ -24,10 +25,12 @@ export default {
   font-size: 24px;
   line-height: 34px;
   @include medium {
+    margin: 0px 50px 50px 50px;
     font-size: 60px;
     line-height: 80px;
   }
   @include large {
+    margin: 0px 70px 70px 70px;
     font-size: 80px;
     line-height: 100px;
   }
