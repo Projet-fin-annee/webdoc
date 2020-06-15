@@ -1564,7 +1564,7 @@ export default {};
   }
 }
 .land {
-  fill: $neutral-grey;
+  fill: rgb(71, 71, 71);
   &.manif {
     fill: $primary-color;
     cursor: pointer;
