@@ -1,6 +1,7 @@
 <template>
   <div class="countrySpeech">
     <h1 class="countrySpeech__title">{{countryData.citationOne}}</h1>
+    <div class="countrySpeech__back"></div>
     <div class="countrySpeech__container">
       <img
         :src="'http://localhost:8081/uploads/image/' + countryData.imageOne "
@@ -20,10 +21,15 @@
         <p class="countrySpeech__author">{{countryData.person}}</p>
       </div>
     </div>
+    <IndicatorScroll></IndicatorScroll>
   </div>
 </template>
 
 <script>
+import IndicatorScroll from "./IndicatorScroll.vue";
+{
+  IndicatorScroll;
+}
 export default {
   props: {
     countryData: Object
@@ -34,9 +40,21 @@ export default {
 <style lang="scss">
 .countrySpeech {
   min-height: 100vh;
+  position: relative;
 
   @include large {
     padding-top: 120px;
+  }
+  &__back {
+    background-color: $primary-color;
+    @include large {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(50%);
+      width: 3px;
+      height: 40px;
+    }
   }
   &__title {
     @include large {

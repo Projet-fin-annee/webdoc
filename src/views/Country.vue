@@ -1,11 +1,12 @@
 <template>
   <div class="country">
-    <div class="country__back"></div>
-    <BackButton>retour à la carte</BackButton>
-    <CountrySpeech v-if="countryData" :countryData="countryData" class="section1"></CountrySpeech>
-    <IndicatorScroll></IndicatorScroll>
-    <CountryIntro v-if="countryData" :countryData="countryData" class="section2"></CountryIntro>
-    <CountryUprising v-if="countryData" :countryData="countryData" class="section3">hhhh</CountryUprising>
+    <router-link to="/WorldMap">
+      <BackButton>retour à la carte</BackButton>
+    </router-link>
+    <CountryHero v-if="countryData" :countryData="countryData" class="section1"></CountryHero>
+    <CountrySpeech v-if="countryData" :countryData="countryData" class="section2"></CountrySpeech>
+    <CountryIntro v-if="countryData" :countryData="countryData" class="section3"></CountryIntro>
+    <CountryUprising v-if="countryData" :countryData="countryData" class="section4"></CountryUprising>
   </div>
 </template>
 
@@ -15,16 +16,17 @@ var debounce = require("debounce");
 import { getCountry } from "../services/index";
 
 import BackButton from "../components/Buttons/BackButton.vue";
-import IndicatorScroll from "../components/Country/IndicatorScroll.vue";
+
+import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
 export default {
   name: "Country",
   components: {
-    CountrySpeech,
     BackButton,
-    IndicatorScroll,
+    CountryHero,
+    CountrySpeech,
     CountryIntro,
     CountryUprising
   },
@@ -119,17 +121,6 @@ export default {
   background-position: center center;
   background-image: url("../assets/texture2.png");
   background-attachment: fixed;
-  &__back {
-    background-color: $primary-color;
-    @include large {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(50%);
-      width: 3px;
-      height: 40px;
-    }
-  }
 }
 .section1,
 .section2,
@@ -137,10 +128,6 @@ export default {
 .section4,
 .section5 {
   min-height: 100vh;
-}
-
-.section4 {
-  background-color: pink;
 }
 
 .section5 {

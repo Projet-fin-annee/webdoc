@@ -4,25 +4,51 @@
       <TimelineInfo
       v-for="info in infos"
       :key="info.id"
-      :date="info.date"></TimelineInfo>
+      :date="info.date"
+      @click.native="currentInfo=info.id"
+      :class="currentInfo == info.id ? 'active' : ''"
+      >
+    </TimelineInfo>
     </TimelineBar>
-
-    <TextStroke type="whiteStroke">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
-      porro mollitia eligendi
-      <span
-        class="pink"
-      >quos</span>ipsam molestias
-      illum animi earum omnis qui voluptates culpa incidunt placeat
-      <span
-        class="white"
-      >beatae ea, laudantium nobis</span>
-      tempore!
+    <transition name="fade">
+    <TextStroke type="pinkStroke" v-if="currentInfo == 1">
+     13 JUILLET 2013 CRéation du <span class="pink">#BLACKLIVESMATTER </span>
+     <span class="white">APPARU SUR TWITTER</span>
+     suite a l’acquitement du meurtier de 
+     <span class="pink">trayvon martin</span>
+     en floride Black Lives Matter se veut multiracial, intersectionnel, homosexuel, sans leader, sans relais politique, ni religieux. 
+     <span class="white">Afin que l’impunité des forces de l’ordre cesse</span>
+    , Black Lives Matter dénonce les
+    <span class="white">violences racistes.</span>
     </TextStroke>
-    <TextStroke type="pinkStroke">
-      Lorem ipsum dolor sit amet consectetur, adipisicing
-      <span class="pink">elit.</span>Quaerat nobis maxime
+    </transition>
+    <transition name="fade">
+    <TextStroke type="pinkStroke" v-if="currentInfo == 2">
+      PREMIERE MARCHES ET MANIFESTATIONS DE RUES 
+      <span class="white">INITIées dès la mort de michael brown</span>
     </TextStroke>
+    </transition>
+    <transition name="fade">
+    <TextStroke type="pinkStroke" v-if="currentInfo == 3">
+      LE MOUVEMENT BLACK LIVES MATTER APPORTE SOUTIEN AU PEUPLE PALESTINIEN FACE à ISRAEL
+    </TextStroke>
+    </transition>
+    <transition name="fade">
+    <TextStroke type="pinkStroke" v-if="currentInfo == 4">
+      dans le cadre du Mois de l'histoire des Noirs , une 
+      <span class="pink">exposition d'art d'un mois "Black Lives Matter" </span>
+      . Le spectacle a présenté plus de 30 artistes multiculturels divers sur
+      <span class="pink">un thème explorant l'égalité raciale et la justice.</span>
+    </TextStroke>
+    </transition>
+    <transition name="fade">
+    <TextStroke type="pinkStroke" v-if="currentInfo == 5">
+      SUITE A LA MORT DE 
+      <span class="pink">GEORGE FLOYD</span> LE MOUVEMENT
+      <span class="pink">BLACK LIVES MATTER </span>
+      S’EST EMPARé du mouvement Réclamant justice et respect.
+    </TextStroke>
+    </transition>
   </div>
 </template>
 
@@ -39,6 +65,7 @@ export default {
   },
     data() {
     return {
+      currentInfo: 1,
       infos: [
         {
           id: '1',
@@ -76,6 +103,12 @@ export default {
     background-image: url('../../assets/background2.png');
     overflow-y: hidden;
     background-attachment: fixed;
+}
+ .fade-enter-active {
+  transition: opacity .8s ease-in-out;
+}
+.fade-enter {
+  opacity: 0;
 }
 </style>
   
