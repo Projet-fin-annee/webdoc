@@ -3,7 +3,7 @@
     <h1 class="countrySpeech__title">{{countryData.citationOne}}</h1>
     <div class="countrySpeech__container">
       <img
-        v-bind:src="'http://localhost:8081/uploads/image/' + countryData.imageOne "
+        :src="'http://localhost:8081/uploads/image/' + countryData.imageOne "
         alt="image country"
         class="countrySpeech__image"
       />

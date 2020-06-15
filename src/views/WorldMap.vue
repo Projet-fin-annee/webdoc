@@ -21,7 +21,7 @@
           <router-link
             v-for="country in countries"
             :key="country.id"
-            v-bind:to="{path:'/worldmap/' + slugify(country.country), query : {country:slugify(country.country)}}"
+            :to="{path:'/worldmap/' + slugify(country.country), query : {country:slugify(country.country)}}"
           >
             <Button>{{country.country}}</Button>
           </router-link>

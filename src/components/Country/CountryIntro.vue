@@ -7,7 +7,7 @@
     <div class="countryIntro__details">
       <img
         v-if="countryData.imageTwo"
-        v-bind:src="'http://localhost:8081/uploads/image/' + countryData.imageTwo "
+        :src="'http://localhost:8081/uploads/image/' + countryData.imageTwo "
         alt="image intro"
         class="countryIntro__image"
       />

@@ -7,7 +7,7 @@
       </div>
       <div class="countryUprising__images">
         <img
-          v-bind:src="'http://localhost:8081/uploads/image/' + countryData.imageThree "
+          :src="'http://localhost:8081/uploads/image/' + countryData.imageThree "
           alt="image uprising"
           class="countryUprising__image1"
         />
