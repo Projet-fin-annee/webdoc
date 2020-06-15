@@ -12,6 +12,7 @@ export default {};
 <style lang="scss">
 .backButton {
   color: white;
+  z-index: 2;
   position: fixed;
   top: 40px;
   left: 20px;

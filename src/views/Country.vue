@@ -1,5 +1,9 @@
 <template>
   <div class="country">
+    <router-link to="/WorldMap">
+      <BackButton>retour à la carte</BackButton>
+    </router-link>
+
     <CountryHero class="section1"></CountryHero>
     <CountrySpeech class="section2"></CountrySpeech>
     <CountryIntro class="section3"></CountryIntro>
@@ -11,6 +15,8 @@
 var VueScrollTo = require("vue-scrollto");
 var debounce = require("debounce");
 
+import BackButton from "../components/Buttons/BackButton.vue";
+
 import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
@@ -19,6 +25,7 @@ import CountryUprising from "@/components/Country/CountryUprising.vue";
 export default {
   name: "Country",
   components: {
+    BackButton,
     CountryHero,
     CountrySpeech,
     CountryIntro,
