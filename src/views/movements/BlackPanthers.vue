@@ -45,6 +45,8 @@
       co-fondateur des black panters, le mouvement s’éteind peu a peu
     </TextStroke>
     </transition>
+    <NavbarDesktop class="fixed" currentPage="L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
+    <NavbarMobile></NavbarMobile>
   </div>
 </template>
 
@@ -52,12 +54,16 @@
 import TextStroke from "@/components/TextStroke.vue";
 import TimelineBar from "@/components/Timeline/TimelineBar.vue";
 import TimelineInfo from "@/components/Timeline/TimelineInfo.vue";
+import NavbarMobile from '@/components/NavbarMobile.vue';
+import NavbarDesktop from '@/components/NavbarDesktop.vue';
 
 export default {
   components: {
     TextStroke,
     TimelineBar,
-    TimelineInfo
+    TimelineInfo,
+    NavbarDesktop,
+    NavbarMobile
   },
     data() {
     return {
@@ -99,6 +105,9 @@ export default {
     background-image: url('../../assets/background2.png');
     overflow-y: hidden;
     background-attachment: fixed;
+}
+.fixed{
+  position: fixed;
 }
  .fade-enter-active {
   transition: opacity .8s ease-in-out;
