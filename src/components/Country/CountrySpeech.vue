@@ -1,8 +1,6 @@
 <template>
   <div class="countrySpeech">
     <div class="countrySpeech__back"></div>
-
-    <BackButton>retour à la carte</BackButton>
     <h1 class="countrySpeech__title">“ENOUGH IS ENOUGH”</h1>
     <div class="countrySpeech__container">
       <img
@@ -37,11 +35,9 @@
 
 <script>
 import IndicatorScroll from "./IndicatorScroll.vue";
-import BackButton from "../../components/Buttons/BackButton.vue";
 
 export default {
   components: {
-    BackButton,
     IndicatorScroll
   }
 };
