@@ -35,7 +35,7 @@ export default {
       setTimeout(function() {
         const navBar = document.querySelector('.navbarDesktop__progressBar');
         const elemActive = document.querySelector('.active');
-        let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth;
+        let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth ;
         navBar.style.width = `${valueWidth}px`;
       }, 10);
     }
