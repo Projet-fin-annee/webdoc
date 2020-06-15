@@ -2,10 +2,10 @@
   <div class="country">
     <div class="country__back"></div>
     <BackButton>retour à la carte</BackButton>
-    <CountrySpeech class="section1"></CountrySpeech>
+    <CountrySpeech v-if="countryData" :countryData="countryData" class="section1"></CountrySpeech>
     <IndicatorScroll></IndicatorScroll>
     <CountryIntro v-if="countryData" :countryData="countryData" class="section2"></CountryIntro>
-    <CountryUprising class="section3"></CountryUprising>
+    <CountryUprising v-if="countryData" :countryData="countryData" class="section3">hhhh</CountryUprising>
   </div>
 </template>
 
