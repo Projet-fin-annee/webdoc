@@ -1,26 +1,11 @@
 <template>
   <div class="soundButton" @click="mutedSound()">
     <div class="soundButton__container">
-      <div
-        class="soundButton__bar bar1"
-        :class="songListened ? 'okaySound' : 'notSound'"
-      ></div>
-      <div
-        class="soundButton__bar bar2"
-        :class="songListened ? 'okaySound' : 'notSound'"
-      ></div>
-      <div
-        class="soundButton__bar bar3"
-        :class="songListened ? 'okaySound' : 'notSound'"
-      ></div>
-      <div
-        class="soundButton__bar bar4"
-        :class="songListened ? 'okaySound' : 'notSound'"
-      ></div>
-      <div
-        class="soundButton__bar bar5"
-        :class="songListened ? 'okaySound' : 'notSound'"
-      ></div>
+      <div class="soundButton__bar bar1" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar2" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar3" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar4" :class="songListened ? 'okaySound' : 'notSound'"></div>
+      <div class="soundButton__bar bar5" :class="songListened ? 'okaySound' : 'notSound'"></div>
     </div>
   </div>
 </template>
@@ -36,16 +21,14 @@ export default {
     playPause(elem) {
       if (elem.muted == false) {
         elem.muted = true;
-        elem.pause();
       } else {
         elem.muted = false;
-        elem.play();
       }
     },
     mutedSound() {
       this.songListened = !this.songListened;
       document
-        .querySelectorAll('video, audio')
+        .querySelectorAll("video, audio")
         .forEach(elem => this.playPause(elem));
     }
   }
