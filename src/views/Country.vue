@@ -4,7 +4,7 @@
     <BackButton>retour à la carte</BackButton>
     <CountrySpeech class="section1"></CountrySpeech>
     <IndicatorScroll></IndicatorScroll>
-    <CountryIntro class="section2"></CountryIntro>
+    <CountryIntro v-if="countryData" :countryData="countryData" class="section2"></CountryIntro>
     <CountryUprising class="section3"></CountryUprising>
   </div>
 </template>
@@ -12,13 +12,13 @@
 <script>
 var VueScrollTo = require("vue-scrollto");
 var debounce = require("debounce");
+import { getCountry } from "../services/index";
 
 import BackButton from "../components/Buttons/BackButton.vue";
 import IndicatorScroll from "../components/Country/IndicatorScroll.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
-
 export default {
   name: "Country",
   components: {
@@ -28,8 +28,11 @@ export default {
     CountryIntro,
     CountryUprising
   },
+
   data() {
     return {
+      country: this.$route.query.country,
+      countryData: null,
       scrollPosition: 0,
       active: null,
       lastActive: null,
@@ -42,8 +45,15 @@ export default {
     this.active = 1;
     this.lastActive = 1;
     window.addEventListener("scroll", this.handleScroll);
+    this.fetchData();
   },
   methods: {
+    fetchData() {
+      getCountry(this.country).then(resp => {
+        console.log("resp", resp);
+        return (this.countryData = resp);
+      });
+    },
     handleScroll() {
       let vm = this;
       let options = {

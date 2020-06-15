@@ -1,38 +1,34 @@
 <template>
   <div class="countrySpeech">
-    <h1 class="countrySpeech__title">“ENOUGH IS ENOUGH”</h1>
+    <h1 class="countrySpeech__title">{{countryData.citationOne}}</h1>
     <div class="countrySpeech__container">
       <img
-        src="../../assets/country/speech_us.png"
+        v-bind:src="'http://localhost:8081/uploads/image/' + countryData.imageOne "
         alt="image country"
         class="countrySpeech__image"
       />
       <div class="countrySpeech__infos">
-        <p
-          class="countrySpeech__text"
-        >George Floyd citoyen afo-Américain a été tué sur le sol américain lors d’une arrestation par la police.</p>
+        <p class="countrySpeech__text">{{countryData.textIntro}}</p>
         <div class="countrySpeech__details">
-          <h2
-            class="countrySpeech__subtitle"
-          >Discours de Tamika Mallory suite à la mort de George Floyd__ 01.06.2020</h2>
+          <h2 class="countrySpeech__subtitle">{{countryData.titleSpeech}}</h2>
           <div class="countrySpeech__listen">
             <img src="../../assets/icons/play.svg" alt="svg play" />
             <img src="../../assets/icons/hear.svg" alt="svg hearphone" />
           </div>
         </div>
-        <p class="countrySpeech__quote">
-          “The reason why buildind are burning are not just for our brother George Floyd . They are burning down because peoples
-          here in Minessota are saying in peoples in New York, California... and people all around this country :
-          <span>ENOUGH IS ENOUGH.</span>”
-        </p>
-        <p class="countrySpeech__author">TAMIKA MALLORY</p>
+        <p class="countrySpeech__quote">{{countryData.citationSpeech}}</p>
+        <p class="countrySpeech__author">{{countryData.person}}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    countryData: Object
+  }
+};
 </script>
 
 <style lang="scss">
