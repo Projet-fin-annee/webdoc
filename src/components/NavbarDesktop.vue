@@ -20,7 +20,7 @@ export default {
         { name: "ACCUEIL", router: "/" },
         { name: "L'HISTOIRE DES MOUVEMENTS", router: "/movements" },
         { name: "CARTE DES PROTESTATIONS", router: "/worldMap" },
-        { name: "CONCLUSION", router: "/conclusion" }
+        { name: " OUVERTURE", router: "/opening" }
       ]
     };
   },
