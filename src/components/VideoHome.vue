@@ -37,8 +37,8 @@ export default {
 
   created() {
     setTimeout(() => (this.videoVisible = false), 10000),
-    setTimeout(() => (this.disclaimerVisible = false), 4500),
-    setTimeout(() => (this.problematicVisible = true), 5000);
+      setTimeout(() => (this.disclaimerVisible = false), 4500),
+      setTimeout(() => (this.problematicVisible = true), 5000);
   }
 };
 </script>
@@ -49,6 +49,7 @@ export default {
   position: fixed;
   width: 100%;
   max-height: 100vh;
+
   &__container {
     width: 100%;
     position: relative;
