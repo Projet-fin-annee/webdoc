@@ -29,13 +29,15 @@ export default {
       ]
     };
   },
-  props: ['currentPage'],
+  props: {
+    currentPage:String
+  },
   methods: {
-    progressBarSize: function hello() {
+    progressBarSize: function Size() {
       setTimeout(function() {
         const navBar = document.querySelector('.navbarDesktop__progressBar');
-        const elemActive = document.querySelector('.active');
-        let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth;
+        const elemActive = document.querySelector('a.active');
+        let valueWidth = elemActive.offsetLeft + elemActive.offsetWidth ;
         navBar.style.width = `${valueWidth}px`;
       }, 10);
     }

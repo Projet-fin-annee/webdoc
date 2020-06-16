@@ -16,7 +16,12 @@
 
 <script>
 export default {
-  props: ['path', 'image', 'country', 'hashtag']
+  props: {
+    path: String,
+    image: String,
+    country: String,
+    hashtag: String
+  }
 };
 </script>
 

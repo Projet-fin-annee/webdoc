@@ -12,7 +12,7 @@
     </TimelineBar>
     <transition name="fade">
     <TextStroke type="whiteStroke" v-if="currentInfo == 1">
-     CRéations du mouvement suite a la<span class="white">mort de malcom x militantiste noir américain</span>
+     CRéations du mouvement suite a la<span class="white"> mort de malcom x militantiste noir américain</span>
      leurs but de <span class="white">combattre les injustices</span>
       que subissent les  afro-AMéricainS AVEC UN programme en dix points a appelé à la cessation immédiate des
       <span class="white">brutalités policières</span>; emploi pour les Afro-Américains; et la terre, le logement et la justice pour tous. 
@@ -45,6 +45,8 @@
       co-fondateur des black panters, le mouvement s’éteind peu a peu
     </TextStroke>
     </transition>
+    <NavbarDesktop class="fixed" currentPage="L'HISTOIRE DES MOUVEMENTS"></NavbarDesktop>
+    <NavbarMobile></NavbarMobile>
   </div>
 </template>
 
@@ -52,12 +54,16 @@
 import TextStroke from "@/components/TextStroke.vue";
 import TimelineBar from "@/components/Timeline/TimelineBar.vue";
 import TimelineInfo from "@/components/Timeline/TimelineInfo.vue";
+import NavbarMobile from '@/components/NavbarMobile.vue';
+import NavbarDesktop from '@/components/NavbarDesktop.vue';
 
 export default {
   components: {
     TextStroke,
     TimelineBar,
-    TimelineInfo
+    TimelineInfo,
+    NavbarDesktop,
+    NavbarMobile
   },
     data() {
     return {
@@ -99,6 +105,9 @@ export default {
     background-image: url('../../assets/background2.png');
     overflow-y: hidden;
     background-attachment: fixed;
+}
+.fixed{
+  position: fixed;
 }
  .fade-enter-active {
   transition: opacity .8s ease-in-out;

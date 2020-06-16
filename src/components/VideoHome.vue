@@ -37,8 +37,8 @@ export default {
 
   created() {
     setTimeout(() => (this.videoVisible = false), 10000),
-      setTimeout(() => (this.disclaimerVisible = false), 4500),
-      setTimeout(() => (this.problematicVisible = true), 5000);
+    setTimeout(() => (this.disclaimerVisible = false), 4500),
+    setTimeout(() => (this.problematicVisible = true), 5000);
   }
 };
 </script>
@@ -96,8 +96,7 @@ export default {
 .problematicVisibility-enter-active {
   transition: all 0.5s ease-in-out;
 }
-.disclaimerVisibility-leave-to,
-.problematicVisibility-enter-to {
+.disclaimerVisibility-leave-to {
   opacity: 0;
 }
 </style>
