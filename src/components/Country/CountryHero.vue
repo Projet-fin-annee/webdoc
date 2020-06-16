@@ -1,6 +1,11 @@
 <template>
   <div class="countryHero">
-    <img src="../../assets/country/hero_us.png" alt="cover hero image" class="countryHero__cover" />
+    <img
+      v-if="countryData.imageBackground"
+      :src="'http://custom-x5lq.frb.io/src/uploads/image/' + countryData.imageBackground "
+      alt="cover hero image"
+      class="countryHero__cover"
+    />
 
     <div class="countryHero__container">
       <div class="countryHero__details">
