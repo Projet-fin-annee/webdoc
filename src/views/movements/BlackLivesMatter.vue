@@ -37,15 +37,15 @@
     <transition name="fade">
     <TextStroke type="pinkStroke" v-if="currentInfo == 4">
       dans le cadre du Mois de l'histoire des Noirs , une 
-      <span class="pink">exposition d'art d'un mois "Black Lives Matter" </span>
-      . Le spectacle a présenté plus de 30 artistes multiculturels divers sur
+      <span class="pink">exposition d'art d'un mois "Black Lives Matter". </span>
+      Le spectacle a présenté plus de 30 artistes multiculturels divers sur
       <span class="pink">un thème explorant l'égalité raciale et la justice.</span>
     </TextStroke>
     </transition>
     <transition name="fade">
     <TextStroke type="pinkStroke" v-if="currentInfo == 5">
       SUITE A LA MORT DE 
-      <span class="pink">GEORGE FLOYD</span> LE MOUVEMENT
+      <span class="pink">GEORGE FLOYD </span> LE MOUVEMENT
       <span class="pink">BLACK LIVES MATTER </span>
       S’EST EMPARé du mouvement Réclamant justice et respect.
     </TextStroke>
