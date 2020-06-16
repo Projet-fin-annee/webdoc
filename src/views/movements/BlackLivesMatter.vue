@@ -1,5 +1,6 @@
 <template>
   <div class="blackLivesMatter">
+    <VideoMovement :videos="videos"></VideoMovement>
     <TimelineBar>
       <TimelineInfo
       v-for="info in infos"
@@ -55,6 +56,7 @@
 </template>
 
 <script>
+import VideoMovement from "@/components/VideoMovement.vue";
 import TextStroke from "@/components/TextStroke.vue";
 import TimelineBar from "@/components/Timeline/TimelineBar.vue";
 import TimelineInfo from "@/components/Timeline/TimelineInfo.vue";
@@ -63,6 +65,7 @@ import NavbarDesktop from '@/components/NavbarDesktop.vue';
 
 export default {
   components: {
+    VideoMovement,
     TextStroke,
     TimelineBar,
     TimelineInfo,
@@ -93,7 +96,8 @@ export default {
           id: '5',
           date: '2020'
         }
-      ]
+      ],
+      videos: "blackPanthers.mp4"
     };
   }
 };
