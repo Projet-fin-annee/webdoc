@@ -31,7 +31,7 @@ export default {
   z-index: 5;
   position: fixed;
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
