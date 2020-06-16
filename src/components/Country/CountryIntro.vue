@@ -1,21 +1,26 @@
-<template>
+<template >
   <div class="countryIntro">
     <div class="countryIntro__titles">
-      <h2 class="countryIntro__title">les etats-unis, l’épicentre du mouvement</h2>
-      <h2 class="countryIntro__stroke">les etats-unis, l’épicentre du mouvement</h2>
+      <h2 class="countryIntro__title">{{countryData.title}}</h2>
+      <h2 class="countryIntro__stroke">{{countryData.title}}</h2>
     </div>
     <div class="countryIntro__details">
-      <img src="../../assets/country/intro_us.png" alt="image intro" class="countryIntro__image" />
-      <p class="countryIntro__text">
-        La réaction fut explosive, des dizaines de milliers de personnes, communauté noire mais aussi accompagnés de nombreuses autres, en dépit des couvres feux et des restrictions sanitaires liées au COVID-19 sortent et sillonent les rues réclamant justice pour George Floyd et l’arrêt des violences policières à caractère raciste.
-        Ils veulent le jugement des policiers responsables de la mort de George Floyd en dépit de leurs statut trés protégés aux Etats Unis ( il s’avère que le policier l’ayant assasiné n’en était pas à sa première victime. )
-      </p>
+      <img
+        v-if="countryData.imageTwo"
+        :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageTwo "
+        alt="image intro"
+      />
+      <p class="countryIntro__text">{{countryData.textOne}}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    countryData: Object
+  }
+};
 </script>
 
 <style lang="scss">
@@ -49,10 +54,7 @@ export default {};
       margin-top: 180px;
     }
   }
-  &__image {
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
-    transform: rotate(-8deg);
-  }
+
   &__text {
     text-align: left;
     @include large {

@@ -4,13 +4,10 @@
 
     <div class="countryHero__container">
       <div class="countryHero__details">
-        <h1 class="countryHero__country">ETATS-UNIS</h1>
-        <p class="countryHero__hastag">#LA SOURCE</p>
+        <h1 class="countryHero__country">{{countryData.country}}</h1>
+        <p class="countryHero__hastag">{{countryData.htag}}</p>
       </div>
-      <p class="countryHero__victims">
-        George Floyd, Breonna Taylor, Walter L. Scott, India Kager, Christofer Kimble, Michael Lee Marshall, Tiara Thomas, Roy Nelson, Bettie Jones, Michael Noel
-        et tant d’autres. #RIP
-      </p>
+      <p class="countryHero__victims">{{countryData.victimsName}} #RIP</p>
     </div>
     <div class="countryHero__next">
       <div class="countryHero__bar"></div>
@@ -23,6 +20,9 @@
 import { gsap } from "gsap";
 
 export default {
+  props: {
+    countryData: Object
+  },
   mounted() {
     gsap.from(".countryHero__cover", 1, {
       filter: "grayscale(100%)",

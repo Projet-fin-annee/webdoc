@@ -1,21 +1,21 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 // VIEWS IMPORT
-import Home from '../views/Home.vue';
+import Home from "../views/Home.vue";
 
-import Introduction from '../views/Introduction.vue';
+import Introduction from "../views/Introduction.vue";
 
-import Tutorial from '../views/Tutorial.vue';
-import WorldMap from '../views/WorldMap.vue';
-import Country from '../views/Country.vue';
+import Tutorial from "../views/Tutorial.vue";
+import WorldMap from "../views/WorldMap.vue";
+import Country from "../views/Country.vue";
 
-import Movements from '../views/Movements.vue';
-import AfroAmerica from '../views/movements/AfroAmerica.vue';
-import BlackPanthers from '../views/movements/BlackPanthers.vue';
-import BlackLivesMatter from '../views/movements/BlackLivesMatter.vue';
+import Movements from "../views/Movements.vue";
+import AfroAmerica from "../views/movements/AfroAmerica.vue";
+import BlackPanthers from "../views/movements/BlackPanthers.vue";
+import BlackLivesMatter from "../views/movements/BlackLivesMatter.vue";
 
-import Conclusion from '../views/Conclusion.vue';
+import Conclusion from "../views/Conclusion.vue";
 
 Vue.use(VueRouter);
 
@@ -23,61 +23,69 @@ Vue.use(VueRouter);
 // Chaque route doivent avoir au minimum un path et un component associé
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/introduction',
-    name: 'Introduction',
-    component: Introduction
+    path: "/introduction",
+    name: "Introduction",
+    component: Introduction,
   },
   {
-    path: '/worldMap',
-    name: 'WorldMap',
-    component: WorldMap
+    path: "/worldMap",
+    name: "WorldMap",
+    component: WorldMap,
   },
   {
-    path: '/Country',
-    name: 'Country',
-    component: Country
+    path: "/worldMap/:country",
+    name: "WorldMap",
+    component: Country,
+    props: (route) => {
+      route.query.country;
+    },
   },
   {
-    path: '/tutorial',
-    name: 'Tutorial',
-    component: Tutorial
+    path: "/Country",
+    name: "Country",
+    component: Country,
   },
   {
-    path: '/movements',
-    name: 'Movements',
-    component: Movements
+    path: "/tutorial",
+    name: "Tutorial",
+    component: Tutorial,
   },
   {
-    path: '/movements/AfroAmerica',
-    name: 'Afro-America',
-    component: AfroAmerica
+    path: "/movements",
+    name: "Movements",
+    component: Movements,
   },
   {
-    path: '/movements/BlackPanthers',
-    name: 'Black-Panthers',
-    component: BlackPanthers
+    path: "/movements/AfroAmerica",
+    name: "Afro-America",
+    component: AfroAmerica,
   },
   {
-    path: '/movements/BlackLivesMatter',
-    name: 'Black-Lives-Matter',
-    component: BlackLivesMatter
+    path: "/movements/BlackPanthers",
+    name: "Black-Panthers",
+    component: BlackPanthers,
   },
   {
-    path: '/conclusion',
-    name: 'Conclusion',
-    component: Conclusion
-  }
+    path: "/movements/BlackLivesMatter",
+    name: "Black-Lives-Matter",
+    component: BlackLivesMatter,
+  },
+  {
+    path: "/conclusion",
+    name: "Conclusion",
+    component: Conclusion,
+  },
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

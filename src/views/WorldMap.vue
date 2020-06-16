@@ -9,8 +9,7 @@
       :image="land.image"
       :country="land.country"
       :hashtag="land.hashtag"
-    >
-    </WorldmapMobile>
+    ></WorldmapMobile>
     <div class="worldmapDesktop">
       <h1 class="worldmapDesktop__title">
         LES MOUVEMENTS REACTIONNAIRES DANS LE MONDE SUITE A LA MORT DE GEORGE
@@ -19,23 +18,12 @@
       <div class="worldmapDesktop__details">
         <Map></Map>
         <div class="worldmapDesktop__buttons">
-          <router-link to="/">
-            <Button>ETATS-UNIS</Button>
-          </router-link>
-          <router-link to="/">
-            <Button>FRANCE</Button>
-          </router-link>
-          <router-link to="/">
-            <Button>CANADA</Button>
-          </router-link>
-          <router-link to="/">
-            <Button>ANGLETERRE</Button>
-          </router-link>
-          <router-link to="/">
-            <Button>NEW ZEALAND</Button>
-          </router-link>
-          <router-link to="/">
-            <Button>HAWAI</Button>
+          <router-link
+            v-for="country in countries"
+            :key="country.id"
+            :to="{path:'/worldmap/' + slugify(country.country), query : {country:slugify(country.country)}}"
+          >
+            <Button>{{country.country}}</Button>
           </router-link>
         </div>
       </div>
@@ -44,14 +32,16 @@
 </template>
 
 <script>
-import NavbarMobile from '@/components/NavbarMobile';
-import NavbarDesktop from '@/components/NavbarDesktop';
-import WorldmapMobile from '@/components/WorldmapMobile';
-import Map from '@/components/Map';
-import Button from '../components/Buttons/Button.vue';
+import NavbarMobile from "@/components/NavbarMobile";
+import NavbarDesktop from "@/components/NavbarDesktop";
+import WorldmapMobile from "@/components/WorldmapMobile";
+import Map from "@/components/Map";
+import Button from "../components/Buttons/Button.vue";
+import { getCountries } from "../services/index";
+import { string_to_slug } from "../outils";
 
 export default {
-  name: 'WorldMap',
+  name: "WorldMap",
   components: {
     NavbarDesktop,
     NavbarMobile,
@@ -59,53 +49,66 @@ export default {
     Map,
     Button
   },
+
   data() {
     return {
+      countries: null,
       lands: [
         {
-          id: 'US',
-          path: '/movements/AfroAmerica',
-          image: 'unitedstates.png',
-          country: 'ETATS-UNIS',
-          hashtag: 'LA SOURCE'
+          id: "US",
+          path: "/movements/AfroAmerica",
+          image: "unitedstates.png",
+          country: "ETATS-UNIS",
+          hashtag: "LA SOURCE"
         },
         {
-          id: 'FR',
-          path: '/',
-          image: 'france.png',
-          country: 'FRANCE',
-          hashtag: 'LE COMBAT ADAMA'
+          id: "FR",
+          path: "/",
+          image: "france.png",
+          country: "FRANCE",
+          hashtag: "LE COMBAT ADAMA"
         },
         {
-          id: 'CA',
-          path: '/',
-          image: 'canada.png',
-          country: 'CANADA',
-          hashtag: 'LE COMBAT ADAMA'
+          id: "CA",
+          path: "/",
+          image: "canada.png",
+          country: "CANADA",
+          hashtag: "LE COMBAT ADAMA"
         },
         {
-          id: 'NZ',
-          path: '/',
-          image: 'newzealand.png',
-          country: 'NOUVELLE ZELANDE',
-          hashtag: 'HASHTAG'
+          id: "NZ",
+          path: "/",
+          image: "newzealand.png",
+          country: "NOUVELLE ZELANDE",
+          hashtag: "HASHTAG"
         },
         {
-          id: 'UK',
-          path: '/',
-          image: 'brazil.png',
-          country: 'ROYAUME-UNI',
-          hashtag: 'HASHTAG'
+          id: "UK",
+          path: "/",
+          image: "brazil.png",
+          country: "ROYAUME-UNI",
+          hashtag: "HASHTAG"
         },
         {
-          id: 'HW',
-          path: '/',
-          image: 'hawai.png',
-          country: 'HAWAÏ',
-          hashtag: 'HASHTAG'
+          id: "HW",
+          path: "/",
+          image: "hawai.png",
+          country: "HAWAÏ",
+          hashtag: "HASHTAG"
         }
       ]
     };
+  },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      getCountries().then(resp => {
+        return (this.countries = resp);
+      });
+    },
+    slugify: string_to_slug
   }
 };
 </script>
@@ -115,7 +118,7 @@ export default {
   overflow-x: hidden;
 
   @include large {
-    background-image: url('../assets/backgroundmap.png');
+    background-image: url("../assets/backgroundmap.png");
     @include backgroundCenter;
   }
 
