@@ -7,6 +7,8 @@
     <CountrySpeech v-if="countryData" :countryData="countryData" class="section2"></CountrySpeech>
     <CountryIntro v-if="countryData" :countryData="countryData" class="section3"></CountryIntro>
     <CountryUprising v-if="countryData" :countryData="countryData" class="section4"></CountryUprising>
+    <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
+    <NavbarMobile></NavbarMobile>
   </div>
 </template>
 
@@ -17,10 +19,14 @@ import { getCountry } from "../services/index";
 
 import BackButton from "../components/Buttons/BackButton.vue";
 
+import NavbarMobile from "@/components/NavbarMobile.vue";
+import NavbarDesktop from "@/components/NavbarDesktop.vue";
+
 import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
+
 export default {
   name: "Country",
   components: {
@@ -28,7 +34,9 @@ export default {
     CountryHero,
     CountrySpeech,
     CountryIntro,
-    CountryUprising
+    CountryUprising,
+    NavbarMobile,
+    NavbarDesktop
   },
 
   data() {
