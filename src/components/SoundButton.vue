@@ -21,8 +21,10 @@ export default {
     playPause(elem) {
       if (elem.muted == false) {
         elem.muted = true;
+        elem.pause();
       } else {
         elem.muted = false;
+        elem.play();
       }
     },
     mutedSound() {
