@@ -1,4 +1,15 @@
-# LES MOUVEMENTS DE SOUTIENS A LA LUTTE CONTRE LES VIOLENCES POLICIERES A CARACTERE RACISTE DANS LE MONDE
+# CAN WE BREATHE NOW
+![](./readme-assets/cover.png)
+[lien du site](https://canwebreathenow.netlify.app/)
+
+
+## Team du projet
+
+- [Nathan STAMPFLI](https://github.com/Nstampfli) 💻FRONT-END 
+- [Maëva WOLFF](https://github.com/MaevaWolff) 🖖🏻FRONT-END
+- [Tania ABITBOL](https://github.com/tania-abitbol) 🛠BACK-END
+- [Lina BLIDI](https://dribbble.com/linablidi) 💄LEAD DESIGNER
+
 
 ## Stack du projet
 
@@ -11,7 +22,9 @@
 
 | route      | description      |
 | ---      | ---      |
-| /        | description |
+| /countries        | pour récupérer la liste de tout les pays |
+| /countries/{nomDuPays}        | pour récupérer les données d'un pays en particulier |
+| /definition       | pour récupérer la liste de toutes les définitions des mots compliqués |
 
 ## Command line pour démarrer le projet
 
@@ -34,14 +47,3 @@ yarn build
 ```
 yarn lint
 ```
-
-## Documentation
-
-https://vuejs.org/
-
-https://router.vuejs.org/
-
-https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf
-
-https://marozed.ma/vue-cheatsheet/
-
