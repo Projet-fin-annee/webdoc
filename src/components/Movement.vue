@@ -17,7 +17,13 @@
 
 <script>
 export default {
-  props: ['path', 'image', 'date', 'chapter', 'title']
+  props:{
+    path: String,
+    image: String,
+    date: String,
+    chapter: String,
+    title: String
+  }
 };
 </script>
 
