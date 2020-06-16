@@ -29,7 +29,9 @@ export default {
       ]
     };
   },
-  props: ['currentPage'],
+  props: {
+    currentPage:String
+  },
   methods: {
     progressBarSize: function Size() {
       setTimeout(function() {
