@@ -7,7 +7,7 @@
     <div class="countryIntro__details">
       <img
         v-if="countryData.imageTwo"
-        :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageTwo "
+        :src="'http://custom-x5lq.frb.io/src/uploads/image/' + countryData.imageTwo "
         alt="image intro"
       />
       <p class="countryIntro__text">{{countryData.textOne}}</p>
