@@ -27,27 +27,27 @@
     <transition name="fade">
       <TextStroke type="pinkStroke" v-if="currentInfo == 2">
         Le FBI deploie des
-        <span class="pink">mesures de répressions</span>Déstinées aux communistes contre l’ORGANISATION jugée
+        <span class="pink">mesures de répressions </span>Déstinées aux communistes contre l’ORGANISATION jugée
         <span class="pink">illégale</span>
       </TextStroke>
     </transition>
     <transition name="fade">
       <TextStroke type="whiteStroke" v-if="currentInfo == 3">
-        <span class="white">+2000 membres des BLACK PANTERS</span>
+        <span class="white">+2000 membres des BLACK PANTERS </span>
         a travers le pays le poing levé vers le ciel, est leurs signe de protestation
       </TextStroke>
     </transition>
     <transition name="fade">
       <TextStroke type="whiteStroke" v-if="currentInfo == 4">
-        <span class="white">ATTAQUE POLICIère au siège des black panters</span>
+        <span class="white">ATTAQUE POLICIère au siège des black panters </span>
         et se termine par la chute du siège suite a 4H D’AFFRONTEMENTS
       </TextStroke>
     </transition>
     <transition name="fade">
       <TextStroke type="pinkStroke" v-if="currentInfo == 5">
         22 août 1969
-        <span class="pink">assassinnat</span>de
-        <span class="pink">HOEY P.NEWTON</span>
+        <span class="pink">assassinnat </span>de
+        <span class="pink">HOEY P.NEWTON </span>
         co-fondateur des black panters, le mouvement s’éteind peu a peu
       </TextStroke>
     </transition>
