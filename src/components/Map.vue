@@ -1569,9 +1569,6 @@ export default {};
     fill: $primary-color;
     cursor: pointer;
     transition: fill 0.2s ease-in;
-    &:hover {
-      fill: #fc9696bb;
-    }
   }
 }
 </style>
