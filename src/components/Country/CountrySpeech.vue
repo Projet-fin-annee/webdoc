@@ -4,7 +4,8 @@
     <div class="countrySpeech__back"></div>
     <div class="countrySpeech__container">
       <img
-        :src="'http://localhost:8081/uploads/image/' + countryData.imageOne "
+        v-if="countryData.imageOne"
+        :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageOne "
         alt="image country"
         class="countrySpeech__image"
       />

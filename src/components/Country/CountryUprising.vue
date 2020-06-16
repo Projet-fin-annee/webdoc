@@ -7,7 +7,8 @@
       </div>
       <div class="countryUprising__images">
         <img
-          :src="'http://localhost:8081/uploads/image/' + countryData.imageThree "
+          v-if="countryData.imageThree"
+          :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageThree "
           alt="image uprising"
           class="countryUprising__image1"
         />

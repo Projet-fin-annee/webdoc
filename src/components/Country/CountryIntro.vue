@@ -1,15 +1,14 @@
 <template >
   <div class="countryIntro">
     <div class="countryIntro__titles">
-      <h2 class="countryIntro__title">{{countryData.country}}</h2>
+      <h2 class="countryIntro__title">{{countryData.title}}</h2>
       <h2 class="countryIntro__stroke">{{countryData.title}}</h2>
     </div>
     <div class="countryIntro__details">
       <img
         v-if="countryData.imageTwo"
-        :src="'http://localhost:8081/uploads/image/' + countryData.imageTwo "
+        :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageTwo "
         alt="image intro"
-        class="countryIntro__image"
       />
       <p class="countryIntro__text">{{countryData.textOne}}</p>
     </div>
@@ -55,10 +54,7 @@ export default {
       margin-top: 180px;
     }
   }
-  &__image {
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
-    transform: rotate(-8deg);
-  }
+
   &__text {
     text-align: left;
     @include large {
