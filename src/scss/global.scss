@@ -4,6 +4,11 @@ img {
 * {
   box-sizing: border-box;
 }
+::selection {
+  /* effet souris  */
+  background: $primary-color; /* REMPLACER PAR LA COULEUR DÉSIRÉE*/
+  color: $neutral-white;
+}
 
 a {
   color: $neutral-white;
