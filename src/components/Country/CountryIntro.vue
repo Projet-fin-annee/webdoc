@@ -9,6 +9,7 @@
         v-if="countryData.imageTwo"
         :src="'https://custom-x5lq.frb.io/src/uploads/image/' + countryData.imageTwo "
         alt="image intro"
+        class="countryIntro__image"
       />
       <p class="countryIntro__text">{{countryData.textOne}}</p>
     </div>
@@ -64,6 +65,9 @@ export default {
       margin-top: 180px;
       flex-direction: row;
     }
+  }
+  &__image {
+    transform: rotate(-14deg);
   }
 
   &__text {
