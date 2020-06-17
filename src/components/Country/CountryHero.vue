@@ -95,14 +95,17 @@ export default {
     }
   }
   &__next {
-    position: absolute;
-    bottom: 100px;
-    transform: rotate(-90deg);
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
+    display: none;
+    @include large {
+      bottom: 100px;
+      position: absolute;
+      transform: rotate(-90deg);
+      justify-content: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
   }
   &__bar {
     width: 40px;
