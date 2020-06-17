@@ -7,7 +7,8 @@
     <CountrySpeech v-if="countryData" :countryData="countryData" class="section2"></CountrySpeech>
     <CountryIntro v-if="countryData" :countryData="countryData" class="section3"></CountryIntro>
     <CountryUprising v-if="countryData" :countryData="countryData" class="section4"></CountryUprising>
-    <CountryPath class="section5"></CountryPath>
+    <CountryVideo class="section5"></CountryVideo>
+    <CountryPath class="section6"></CountryPath>
     <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
     <NavbarMobile></NavbarMobile>
   </div>
@@ -27,6 +28,8 @@ import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
+import CountryVideo from "@/components/Country/CountryVideo.vue";
+
 import CountryPath from "@/components/Country/CountryPath.vue";
 
 export default {
@@ -37,6 +40,7 @@ export default {
     CountrySpeech,
     CountryIntro,
     CountryUprising,
+    CountryVideo,
     CountryPath,
     NavbarMobile,
     NavbarDesktop
@@ -105,8 +109,10 @@ export default {
             VueScrollTo.scrollTo(".section4", 500, options);
           } else if (this.active === 4) {
             VueScrollTo.scrollTo(".section5", 500, options);
-          }else if (this.active === 5) {
+          } else if (this.active === 5) {
             VueScrollTo.scrollTo(".section6", 500, options);
+          } else if (this.active === 6) {
+            VueScrollTo.scrollTo(".section7", 500, options);
           }
         } else {
           if (this.active === 2) {
@@ -117,8 +123,10 @@ export default {
             VueScrollTo.scrollTo(".section3", 500, options);
           } else if (this.active === 5) {
             VueScrollTo.scrollTo(".section4", 500, options);
-          }else if (this.active === 6) {
+          } else if (this.active === 6) {
             VueScrollTo.scrollTo(".section5", 500, options);
+          } else if (this.active === 7) {
+            VueScrollTo.scrollTo(".section6", 500, options);
           }
         }
       }
@@ -142,11 +150,12 @@ export default {
 .section3,
 .section4,
 .section5,
-.section6 {
+.section6,
+section7 {
   min-height: 100vh;
 }
 
-.section6 {
+.section7 {
   background-color: green;
 }
 </style>
