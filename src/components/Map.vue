@@ -1567,7 +1567,6 @@ export default {};
   fill: rgb(71, 71, 71);
   &.manif {
     fill: $primary-color;
-    cursor: pointer;
     transition: fill 0.2s ease-in;
   }
 }
