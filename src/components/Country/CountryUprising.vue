@@ -8,7 +8,7 @@
       <div class="countryUprising__images">
         <img
           v-if="countryData.imageThree"
-          :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageThree "
+          :src="'https://custom-x5lq.frb.io/uploads/image/' + countryData.imageThree "
           alt="image uprising"
           class="countryUprising__image1"
         />

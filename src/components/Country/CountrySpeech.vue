@@ -5,7 +5,7 @@
     <div class="countrySpeech__container">
       <img
         v-if="countryData.imageOne"
-        :src="'http://custom-x5lq.frb.io/uploads/image/' + countryData.imageOne "
+        :src="'https://custom-x5lq.frb.io/uploads/image/' + countryData.imageOne "
         alt="image country"
         class="countrySpeech__image"
       />
