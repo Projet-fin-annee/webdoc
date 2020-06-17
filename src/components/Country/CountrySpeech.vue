@@ -34,14 +34,15 @@
 
 <script>
 import IndicatorScroll from "./IndicatorScroll.vue";
-{
-  IndicatorScroll;
-}
+
 export default {
   data() {
     return {
       svg: "play.svg"
     };
+  },
+  components: {
+    IndicatorScroll
   },
   props: {
     countryData: Object
