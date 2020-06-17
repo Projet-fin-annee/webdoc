@@ -54,10 +54,10 @@ export default {
     flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
-    @include large {
-      align-items: initial;
+    @include medium {
+      align-items: center;
       flex-direction: row;
-      margin-top: 100px;
+      margin-top: 60px;
     }
   }
   &__texts {
@@ -66,9 +66,12 @@ export default {
     text-align: left;
     line-height: 22px;
     @include medium {
-      width: 30%;
-      font-size: 20px;
+      width: 40%;
+      font-size: 18px;
       line-height: 30px;
+    }
+    @include large {
+      font-size: 20px;
     }
   }
   &__text {
@@ -79,9 +82,9 @@ export default {
   &__images {
     width: 60%;
     @include medium {
+      width: 40%;
       position: relative;
       height: auto;
-      width: 100%;
       z-index: 2;
     }
   }

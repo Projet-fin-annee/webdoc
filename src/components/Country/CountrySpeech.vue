@@ -115,8 +115,10 @@ export default {
     opacity: 0.5;
     @include medium {
       position: initial;
-      opacity: 1;
       display: block;
+    }
+    @include large {
+      opacity: 1;
     }
   }
   &__text {
@@ -149,10 +151,6 @@ export default {
   }
   &__audio {
     cursor: pointer;
-    width: 80%;
-    @include medium {
-      width: 100%;
-    }
   }
   &__quote {
     margin-top: 20px;
