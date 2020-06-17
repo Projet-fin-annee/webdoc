@@ -3,7 +3,10 @@
     <h2 class="countryVideo__title">La vidéo</h2>
     <h2 class="countryVideo__subtitle">Cliquez sur la vidéo pour la lancer</h2>
     <video @click="videoShow()" ref="video" class="countryVideo__content">
-      <source src="../../assets/videos/blackPanthers.mp4" type="video/mp4" />
+      <source
+        :src="'http://custom-x5lq.frb.io/uploads/video/' + countryData.video"
+        type="video/mp4"
+      />
     </video>
   </div>
 </template>
