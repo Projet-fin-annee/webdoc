@@ -65,12 +65,16 @@ export default {
 .countrySpeech {
   min-height: 100vh;
   position: relative;
-
+  padding-top: 120px;
   @include large {
-    padding-top: 120px;
+    padding-top: 60px;
   }
   &__back {
     background-color: $primary-color;
+    display: none;
+    @include medium {
+      display: block;
+    }
     @include large {
       position: absolute;
       top: 0;
@@ -81,12 +85,15 @@ export default {
     }
   }
   &__title {
+    font-size: 30px;
+    font-weight: 600;
     @include large {
       font-size: 50px;
-      font-weight: bold;
     }
   }
   &__container {
+    display: flex;
+    justify-content: center;
     @include large {
       display: flex;
       margin-top: 40px;
@@ -95,15 +102,30 @@ export default {
   }
   &__infos {
     text-align: left;
+    position: absolute;
+    width: 80%;
     @include large {
+      position: initial;
       width: 600px;
       margin-left: 180px;
     }
   }
+  &__image {
+    position: relative;
+    opacity: 0.5;
+    @include medium {
+      position: initial;
+      opacity: 1;
+      display: block;
+    }
+  }
   &__text {
-    font-weight: bold;
+    margin-top: 40px;
+    line-height: 22px;
+    font-size: 16px;
     @include large {
       font-size: 20px;
+      font-weight: bold;
     }
   }
   &__details {
@@ -113,8 +135,9 @@ export default {
   }
   &__subtitle {
     color: $primary-color;
+    font-size: 22px;
     @include large {
-      font-size: 27px;
+      font-size: 24px;
       width: 60%;
     }
   }
@@ -126,8 +149,14 @@ export default {
   }
   &__audio {
     cursor: pointer;
+    width: 80%;
+    @include medium {
+      width: 100%;
+    }
   }
   &__quote {
+    margin-top: 20px;
+    line-height: 22px;
     span {
       text-decoration: underline;
     }

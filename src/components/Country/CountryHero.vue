@@ -47,11 +47,9 @@ export default {
   height: 100vh;
   width: 100%;
   position: relative;
-
   &__cover {
     width: 100%;
     height: 100vh;
-
     object-fit: cover;
   }
   &__container {
@@ -62,8 +60,10 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     @include large {
       margin-top: 35vh;
+      justify-content: initial;
     }
   }
   &__details {
@@ -73,17 +73,21 @@ export default {
   }
 
   &__country {
+    font-size: 60px;
+    font-weight: 900;
     @include large {
       font-size: 120px;
-      font-weight: 900;
     }
   }
   &__hastag {
     color: $primary-color;
+    margin-top: 8px;
   }
   &__victims {
     text-align: left;
-    max-width: 800px;
+    line-height: 24px;
+    max-width: 80%;
+    margin-top: 20px;
     @include large {
       margin-top: 40px;
       font-size: 18px;
@@ -91,20 +95,27 @@ export default {
     }
   }
   &__next {
-    position: absolute;
-    bottom: 100px;
-    transform: rotate(-90deg);
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
+    display: none;
+    @include large {
+      bottom: 100px;
+      position: absolute;
+      transform: rotate(-90deg);
+      justify-content: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
   }
   &__bar {
-    width: 60px;
-    height: 4px;
+    width: 40px;
+    height: 3px;
     background-color: $primary-color;
     margin-right: 14px;
+    @include medium {
+      width: 60px;
+      height: 3px;
+    }
   }
 }
 </style>
