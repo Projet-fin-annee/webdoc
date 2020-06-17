@@ -1,23 +1,11 @@
 <template>
   <div class="countryPath">
     <div class="countryPath__container">
-        <div class="countryPath__land">
-      <router-link to="/">
-          <h3 class="countryPath__subtitle"> FRANCE </h3>
-          <img class="countryPath__image" src="../../assets/france.png" alt="">
-      </router-link>
-        </div>
-        <div class="countryPath__land">
-      <router-link to="/">
-          <h3 class="countryPath__subtitle"> FRANCE </h3>
-          <img class="countryPath__image" src="../../assets/france.png" alt="">
-      </router-link>
-        </div>
-        <div class="countryPath__land">
-      <router-link to="/">
-          <h3 class="countryPath__subtitle"> FRANCE </h3>
-          <img class="countryPath__image" src="../../assets/france.png" alt="">
-      </router-link>
+        <div class="countryPath__land" v-for="(item, index) in landList" :key="index">
+          <router-link :to="{ path: item.router }">
+            <h3 class="countryPath__subtitle"> {{item.title}} </h3>
+            <img class="countryPath__image" :src="require(`@/assets/${item.image}`)" alt="ImageOfLand">
+          </router-link>
         </div>
     </div>
   </div>
@@ -25,7 +13,15 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      landList: [
+        { title: "FRANCE", router: "/worldMap" , image: "france.png"},
+        { title: "CANADA", router: "/worldMap", image: "canada.png" },
+        { title: "HAWAI", router: "/worldMap", image: "hawai.png" },
+      ]
+    }
+  }
 };
 </script>
 
@@ -73,6 +69,7 @@ export default {
     font-weight: 900;
     top: 50%;
     left: 50%;
+    text-transform: uppercase;
     transform: translate(-50%,-50%);
     @include medium{
       font-size: 36px;
