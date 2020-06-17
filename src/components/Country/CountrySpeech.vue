@@ -14,7 +14,7 @@
         <div class="countrySpeech__details">
           <h2 class="countrySpeech__subtitle">{{countryData.titleSpeech}}</h2>
           <div class="countrySpeech__listen">
-            <audio ref="audio" src="../../assets/audio/typing.mp3"></audio>
+            <audio ref="audio" :src="'http://custom-x5lq.frb.io/uploads/video/' + countryData.audio"></audio>
             <img
               :src="require(`@/assets/icons/${svg}`)"
               @click="playPause()"
