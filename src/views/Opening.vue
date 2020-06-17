@@ -1,15 +1,21 @@
 <template>
-  <div class="cc post">
+  <div class="opening">
+    <GlobalAudio></GlobalAudio>
     <h1>MAEVA LA BOOSSSSSS ee💩💩</h1>
   </div>
 </template>
 
 <script>
-export default {};
+import GlobalAudio from "@/components/GlobalAudio.vue";
+export default {
+  components: {
+    GlobalAudio
+  }
+};
 </script>
 
 <style>
-.cc {
+.opening {
   width: 100%;
   height: 100vh;
   color: blue;

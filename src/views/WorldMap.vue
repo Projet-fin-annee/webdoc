@@ -1,5 +1,6 @@
 <template>
   <div class="worldmap">
+    <GlobalAudio></GlobalAudio>
     <NavbarMobile></NavbarMobile>
     <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
     <WorldmapMobile
@@ -32,6 +33,7 @@
 </template>
 
 <script>
+import GlobalAudio from "@/components/GlobalAudio";
 import NavbarMobile from "@/components/NavbarMobile";
 import NavbarDesktop from "@/components/NavbarDesktop";
 import WorldmapMobile from "@/components/WorldmapMobile";
@@ -43,6 +45,7 @@ import { string_to_slug } from "../outils";
 export default {
   name: "WorldMap",
   components: {
+    GlobalAudio,
     NavbarDesktop,
     NavbarMobile,
     WorldmapMobile,
