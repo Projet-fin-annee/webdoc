@@ -7,6 +7,7 @@
     <CountrySpeech v-if="countryData" :countryData="countryData" class="section2"></CountrySpeech>
     <CountryIntro v-if="countryData" :countryData="countryData" class="section3"></CountryIntro>
     <CountryUprising v-if="countryData" :countryData="countryData" class="section4"></CountryUprising>
+    <CountryPath class="section5"></CountryPath>
     <NavbarDesktop currentPage="CARTE DES PROTESTATIONS"></NavbarDesktop>
     <NavbarMobile></NavbarMobile>
   </div>
@@ -26,6 +27,7 @@ import CountryHero from "@/components/Country/CountryHero.vue";
 import CountrySpeech from "@/components/Country/CountrySpeech.vue";
 import CountryIntro from "@/components/Country/CountryIntro.vue";
 import CountryUprising from "@/components/Country/CountryUprising.vue";
+import CountryPath from "@/components/Country/CountryPath.vue";
 
 export default {
   name: "Country",
@@ -35,6 +37,7 @@ export default {
     CountrySpeech,
     CountryIntro,
     CountryUprising,
+    CountryPath,
     NavbarMobile,
     NavbarDesktop
   },
@@ -102,6 +105,8 @@ export default {
             VueScrollTo.scrollTo(".section4", 500, options);
           } else if (this.active === 4) {
             VueScrollTo.scrollTo(".section5", 500, options);
+          }else if (this.active === 5) {
+            VueScrollTo.scrollTo(".section6", 500, options);
           }
         } else {
           if (this.active === 2) {
@@ -112,6 +117,8 @@ export default {
             VueScrollTo.scrollTo(".section3", 500, options);
           } else if (this.active === 5) {
             VueScrollTo.scrollTo(".section4", 500, options);
+          }else if (this.active === 6) {
+            VueScrollTo.scrollTo(".section5", 500, options);
           }
         }
       }
@@ -134,11 +141,12 @@ export default {
 .section2,
 .section3,
 .section4,
-.section5 {
+.section5,
+.section6 {
   min-height: 100vh;
 }
 
-.section5 {
+.section6 {
   background-color: green;
 }
 </style>
