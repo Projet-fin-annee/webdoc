@@ -149,6 +149,10 @@ export default {
   }
   &__audio {
     cursor: pointer;
+    width: 80%;
+    @include medium {
+      width: 100%;
+    }
   }
   &__quote {
     margin-top: 20px;
