@@ -14,7 +14,13 @@
         <div class="countrySpeech__details">
           <h2 class="countrySpeech__subtitle">{{countryData.titleSpeech}}</h2>
           <div class="countrySpeech__listen">
-            <img src="../../assets/icons/play.svg" alt="svg play" />
+            <audio ref="audio" src="../../assets/audio/typing.mp3"></audio>
+            <img
+              :src="require(`@/assets/icons/${svg}`)"
+              @click="playPause()"
+              alt="svg play"
+              class="countrySpeech__audio"
+            />
             <img src="../../assets/icons/hear.svg" alt="svg hearphone" />
           </div>
         </div>
@@ -32,8 +38,25 @@ import IndicatorScroll from "./IndicatorScroll.vue";
   IndicatorScroll;
 }
 export default {
+  data() {
+    return {
+      svg: "play.svg"
+    };
+  },
   props: {
     countryData: Object
+  },
+  methods: {
+    playPause() {
+      const el = this.$refs.audio;
+      if (el.paused) {
+        el.play();
+        this.svg = "pause.svg";
+      } else {
+        el.pause();
+        this.svg = "play.svg";
+      }
+    }
   }
 };
 </script>
@@ -100,6 +123,9 @@ export default {
     align-items: flex-start;
     justify-content: space-around;
     width: 20%;
+  }
+  &__audio {
+    cursor: pointer;
   }
   &__quote {
     span {
