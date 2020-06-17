@@ -1,12 +1,14 @@
 <template>
   <div class="tutorial">
+    <GlobalAudio></GlobalAudio>
     <router-link to="/">
       <BackButton>retour</BackButton>
     </router-link>
     <p class="tutorial__instruction">
       Découvre
       <em>les mouvements réactionnaires</em> suite à la mort de George Floyd à
-      travers le monde en cliquant sur les <span>boutons</span> correspondant
+      travers le monde en cliquant sur les
+      <span>boutons</span> correspondant
       aux pays en
       <span>rose.</span>
     </p>
@@ -33,20 +35,20 @@
       <Button class="tutorial__button">France</Button>
     </div>
     <router-link to="/WorldMap">
-      <Button type="outline" class="tutorial__next"
-        >DÉCOUVRIR LA CARTE DU MONDE</Button
-      >
+      <Button type="outline" class="tutorial__next">DÉCOUVRIR LA CARTE DU MONDE</Button>
     </router-link>
   </div>
 </template>
 
 <script>
-import Button from '../components/Buttons/Button.vue';
-import BackButton from '../components/Buttons/BackButton.vue';
+import Button from "../components/Buttons/Button.vue";
+import BackButton from "../components/Buttons/BackButton.vue";
+import GlobalAudio from "../components/GlobalAudio.vue";
 
 export default {
-  name: 'Tutorial',
+  name: "Tutorial",
   components: {
+    GlobalAudio,
     Button,
     BackButton
   }
@@ -59,7 +61,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url('../assets/background2.png');
+  background-image: url("../assets/background2.png");
   @include backgroundCenter;
   &__instruction {
     font-size: 16px;

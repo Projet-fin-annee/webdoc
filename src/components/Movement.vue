@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props:{
+  props: {
     path: String,
     image: String,
     date: String,
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/style.scss';
+@import "../scss/style.scss";
 .movement {
   @include flexCenter;
   width: 100%;

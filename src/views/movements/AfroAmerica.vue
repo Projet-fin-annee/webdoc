@@ -1,5 +1,6 @@
 <template>
   <div class="afroAmerica">
+    <GlobalAudio ref="globalAudio"></GlobalAudio>
     <VideoMovement :videos="videos"></VideoMovement>
     <TimelineBar>
       <TimelineInfo
@@ -16,7 +17,7 @@
         visait à établir une
         <span class="pink">réelle égalité de droits civiques</span>
         pour les
-        <span class="pink">Noirs américains </span>en abolissant
+        <span class="pink">Noirs américains</span>en abolissant
         <span class="pink">la législation qui instaurait la ségrégation</span>
         raciale aux États-Unis d'Amérique.
       </TextStroke>
@@ -26,7 +27,7 @@
         La première grande victoire est enregistrée
         <span
           class="pink"
-        >, sur le registre légal, par l'arrêt de la Cour suprême de 1954 dans Brown v. Board of Education, déclarant anti-constitutionnelle la </span>
+        >, sur le registre légal, par l'arrêt de la Cour suprême de 1954 dans Brown v. Board of Education, déclarant anti-constitutionnelle la</span>
         <span class="white">ségrégation raciale dans les écoles publiques.</span>
       </TextStroke>
     </transition>
@@ -65,6 +66,7 @@
 </template>
 
 <script>
+import GlobalAudio from "@/components/GlobalAudio.vue";
 import VideoMovement from "@/components/VideoMovement.vue";
 import TextStroke from "@/components/TextStroke.vue";
 import TimelineBar from "@/components/Timeline/TimelineBar.vue";
@@ -74,6 +76,7 @@ import NavbarDesktop from "@/components/NavbarDesktop.vue";
 
 export default {
   components: {
+    GlobalAudio,
     VideoMovement,
     TextStroke,
     TimelineBar,
@@ -109,6 +112,13 @@ export default {
       ],
       videos: "afroAmerica.mp4"
     };
+  },
+  mounted: function() {
+    const globalAudio = this.$refs.globalAudio.$refs.song;
+    globalAudio.pause();
+    setTimeout(() => {
+      globalAudio.play();
+    }, 17000);
   }
 };
 </script>
