@@ -73,28 +73,28 @@ export default {
           path: "/",
           image: "canada.png",
           country: "CANADA",
-          hashtag: "LE COMBAT ADAMA"
+          hashtag: "UN COMBAT FRONTALIER"
         },
         {
           id: "NZ",
           path: "/",
           image: "newzealand.png",
           country: "NOUVELLE ZELANDE",
-          hashtag: "HASHTAG"
+          hashtag: "la réaction d'un peuple diversifié"
         },
         {
           id: "UK",
           path: "/",
           image: "brazil.png",
           country: "ROYAUME-UNI",
-          hashtag: "HASHTAG"
+          hashtag: "UN ÉTERNEL COMBAT"
         },
         {
           id: "HW",
           path: "/",
           image: "hawai.png",
           country: "HAWAÏ",
-          hashtag: "HASHTAG"
+          hashtag: "UN COMBAT IMPORTANT"
         }
       ]
     };
