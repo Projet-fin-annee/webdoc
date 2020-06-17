@@ -2,7 +2,7 @@
   <div class="opening">
     <GlobalAudio></GlobalAudio>
     <NavbarMobile></NavbarMobile>
-    <NavbarDesktop></NavbarDesktop>
+    <NavbarDesktop currentPage="OUVERTURE"></NavbarDesktop>
     <h1 class="opening__title">ET MAINTENANT ?</h1>
     <div class="opening__texts">
       <p
