@@ -80,6 +80,7 @@ export default {
   }
   &__hastag {
     color: $primary-color;
+    text-transform: uppercase;
   }
   &__victims {
     text-align: left;
