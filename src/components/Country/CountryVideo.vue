@@ -37,6 +37,7 @@ export default {
     margin-top: 20px;
     @include medium {
       width: 80%;
+      border: 10px solid $primary-color;
     }
   }
   &__title {
