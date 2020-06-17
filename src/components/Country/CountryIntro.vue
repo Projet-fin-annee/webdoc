@@ -28,10 +28,13 @@ export default {
   min-height: 100vh;
   padding-top: 110px;
   &__titles {
+    font-size: 24px;
     text-transform: uppercase;
-    font-size: 50px;
     font-weight: 900;
-    position: relative;
+    @include medium {
+      font-size: 50px;
+      position: relative;
+    }
   }
   &__title {
     @include large {
@@ -39,24 +42,34 @@ export default {
     }
   }
   &__stroke {
-    position: absolute;
-    top: 20px;
-    left: 80px;
-    color: transparent;
-    -webkit-text-stroke: 1px $primary-color;
+    display: none;
+    @include medium {
+      position: absolute;
+      display: block;
+      top: 20px;
+      left: 80px;
+      color: transparent;
+      -webkit-text-stroke: 1px $primary-color;
+    }
   }
+
   &__details {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
+    margin-top: 40px;
     @include large {
       margin-top: 180px;
+      flex-direction: row;
     }
   }
 
   &__text {
     text-align: left;
+    line-height: 24px;
+    width: 80%;
     @include large {
       font-size: 20px;
       width: 30%;

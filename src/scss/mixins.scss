@@ -8,6 +8,11 @@
     @content;
   }
 }
+@mixin xlarge {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
 
 @mixin backgroundCenter {
   width: 100%;
