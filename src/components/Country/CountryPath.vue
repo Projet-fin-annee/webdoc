@@ -1,24 +1,24 @@
 <template>
   <div class="countryPath">
     <div class="countryPath__container">
-      <router-link to="/">
         <div class="countryPath__land">
+      <router-link to="/">
           <h3 class="countryPath__subtitle"> FRANCE </h3>
           <img class="countryPath__image" src="../../assets/france.png" alt="">
-        </div>
       </router-link>
-      <router-link to="/">
+        </div>
         <div class="countryPath__land">
+      <router-link to="/">
           <h3 class="countryPath__subtitle"> FRANCE </h3>
           <img class="countryPath__image" src="../../assets/france.png" alt="">
-        </div>
       </router-link>
-      <router-link to="/">
+        </div>
         <div class="countryPath__land">
+      <router-link to="/">
           <h3 class="countryPath__subtitle"> FRANCE </h3>
           <img class="countryPath__image" src="../../assets/france.png" alt="">
-        </div>
       </router-link>
+        </div>
     </div>
   </div>
 </template>
@@ -41,12 +41,26 @@ export default {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
+    @include large{
+      width: 90%;
+      height: 70vh;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__land{
     height: calc(100vh/3);
     position: relative;
     cursor: pointer;
+    transition: all .4s ease-in-out;
+      @include large{
+      width: 30%;
+      height: 100%;
+      &:hover{
+        transform: translateY(-10px);
+      }
+    }
   }
   &__subtitle{
     color: $primary-color;
@@ -59,6 +73,9 @@ export default {
     transform: translate(-50%,-50%);
     @include medium{
       font-size: 36px;
+    }
+    @include large{
+      font-size: 50px;
     }
   }
   &__image{
