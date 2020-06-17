@@ -42,6 +42,8 @@ export default {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     @include large{
       width: 90%;
       height: 70vh;
@@ -50,7 +52,8 @@ export default {
     }
   }
   &__land{
-    height: calc(100vh/3);
+    height: 23%;
+    width: 69%;
     position: relative;
     cursor: pointer;
     transition: all .4s ease-in-out;
