@@ -33,30 +33,40 @@ export default {
 <style lang="scss">
 .countryUprising {
   min-height: 100vh;
-  padding-top: 110px;
   position: relative;
+  padding-top: 90px;
   overflow-x: hidden;
+  @include medium {
+    padding-top: 110px;
+  }
 
   &__title {
     color: $primary-color;
     text-transform: uppercase;
     font-weight: 900;
+    font-size: 24px;
     @include large {
       font-size: 50px;
     }
   }
   &__details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-around;
+    align-items: center;
     @include large {
+      align-items: initial;
+      flex-direction: row;
       margin-top: 100px;
     }
   }
   &__texts {
-    @include large {
+    width: 80%;
+    margin-top: 14px;
+    text-align: left;
+    line-height: 22px;
+    @include medium {
       width: 30%;
-      text-align: left;
       font-size: 20px;
       line-height: 30px;
     }
@@ -67,18 +77,23 @@ export default {
     }
   }
   &__images {
-    @include large {
+    width: 60%;
+    @include medium {
       position: relative;
       height: auto;
+      width: 100%;
       z-index: 2;
     }
   }
 
   &__punch {
-    position: absolute;
-    top: 40px;
-    right: -120px;
-    transform: rotate(-40deg);
+    display: none;
+    @include medium {
+      position: absolute;
+      top: 40px;
+      right: -120px;
+      transform: rotate(-40deg);
+    }
   }
 }
 </style>
