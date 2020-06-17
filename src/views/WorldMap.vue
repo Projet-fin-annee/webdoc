@@ -100,6 +100,7 @@ export default {
     };
   },
   mounted() {
+    console.log("ee");
     this.fetchData();
   },
   methods: {
