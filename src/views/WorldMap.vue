@@ -103,11 +103,15 @@ export default {
     };
   },
   mounted() {
+    console.log("ee");
+
     this.fetchData();
   },
   methods: {
     fetchData() {
       getCountries().then(resp => {
+        console.log(resp);
+
         return (this.countries = resp);
       });
     },
