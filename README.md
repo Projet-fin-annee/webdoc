@@ -13,9 +13,13 @@
 
 ## Stack du projet
 
+** Front-end**
 - Babel (es6 syntax)
 - Vue.js
   - Vue Router
+  - Vue Page Transition
+  - Vue Typer
+  - Vue ScrollTo
 - Sass
 
 ## API
