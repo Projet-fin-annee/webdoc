@@ -13,7 +13,7 @@
 
 ## Stack du projet
 
-** Front-end**
+**Front-end**
 - Babel (es6 syntax)
 - Vue.js
   - Vue Router
