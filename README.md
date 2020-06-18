@@ -2,6 +2,9 @@
 ![](./readme-assets/cover.png)
 [lien du site](https://canwebreathenow.netlify.app/)
 
+## DISCLAIMER
+
+Ce webdocumentaire est réalisé pour un projet d'étude bachelor web à l'école d'études supérieures Hétic. Toutes les informations utilisées sur ce site sont strictement à titre informatif, et ne nous appartiennent pas.
 
 ## Team du projet
 
